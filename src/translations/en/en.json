@@ -1,0 +1,58 @@
+{
+  "main": {
+    "heading": {
+      "first": "Hi, I'm"
+    },
+    "button": {
+      "first": "Download CV",
+      "second": "Contact"
+    }
+  },
+  "about": {
+    "heading": {
+      "first": "ABOUT ME",
+      "second": "About",
+      "third": "Skills",
+      "fourth": "Certifications"
+    },
+    "about": {
+      "first": "I am a 22 years old developer from Corrientes Argentina.",
+      "second": "I discovered programming more than a year ago, and since then I have been training my skills as a web developer, learning every day.",
+      "third": "I have experience developing E-Commerces, Landing pages and Web Apps. I consider myself better on the Front-end but I've been getting into Back-end technologies for a few months now.",
+      "fourth": "Since I was a child I have been a fan of technology, games and science, I am always willing to talk about these topics."
+    },
+    "skills": {
+      "first": "Some of the technologies i used are:"
+    }
+  },
+  "projects": {
+    "heading": {
+      "first": "PROJECTS",
+      "second": "In this section you can see some of the projects i've been working on, both personal and professional ones."
+    },
+    "projects": {
+      "first": {
+        "name": "E-Commerce",
+        "description": "E-Commerce developed with React, Redux, Node, Express and PostgreSQL.",
+        "link": "a"
+      }
+    }
+  },
+  "contact": {
+    "heading": {
+      "first": "Contact me",
+      "second": "Send me a message"
+    },
+    "input": {
+      "first": "Name",
+      "second": "Email",
+      "third": "Let a message"
+    }
+  },
+  "sidebar": {
+    "first": "Home",
+    "second": "About me",
+    "third": "Projects",
+    "fourth": "Contact"
+  }
+}

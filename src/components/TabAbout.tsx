@@ -1,0 +1,276 @@
+import {
+  Flex,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+  Text,
+  Box,
+  useTheme,
+  UnorderedList,
+  ListItem,
+} from "@chakra-ui/react";
+import { AttachmentIcon } from "@chakra-ui/icons";
+import React from "react";
+import { useRouter } from "next/router";
+import english from "../translations/en/en.json";
+import spanish from "../translations/es/es.json";
+
+function TabAbout() {
+  const { locale } = useRouter();
+  const theme = useTheme();
+
+  return (
+    <>
+      <Flex justifyContent="center">
+        <Tabs w="500px" h="525px" size="lg">
+          <TabList fontFamily={theme.fonts.secondary} justifyContent="center">
+            <Tab
+              fontSize={["lg", "lg", "lg", "lg", "lg", "3xl"]}
+              _selected={{ color: "tertiary" }}
+              _active={{ bg: "none" }}
+            >
+              {locale === "en-US"
+                ? english.about.heading.second
+                : spanish.about.heading.second}
+            </Tab>
+            <Tab
+              fontSize={["lg", "lg", "lg", "lg", "lg", "3xl"]}
+              _selected={{ color: "tertiary" }}
+              _active={{ bg: "none" }}
+            >
+              {locale === "en-US"
+                ? english.about.heading.third
+                : spanish.about.heading.third}
+            </Tab>
+            <Tab
+              fontSize={["lg", "lg", "lg", "lg", "lg", "3xl"]}
+              _selected={{ color: "tertiary" }}
+              _active={{ bg: "none" }}
+            >
+              {locale === "en-US"
+                ? english.about.heading.fourth
+                : spanish.about.heading.fourth}
+            </Tab>
+          </TabList>
+
+          <TabPanels>
+            <TabPanel px="1rem">
+              <Flex gap="1vw" flexWrap="wrap">
+                <Text
+                  color="primary"
+                  fontSize={{ base: "xl", md: "2xl", "2xl": "26px" }}
+                  fontWeight="bold"
+                >
+                  Gaspar Escobar{" | "}Fullstack Developer
+                </Text>
+              </Flex>
+              <Text
+                maxW="500px"
+                color="primary"
+                fontWeight="bold"
+                fontFamily={theme.fonts.primary}
+                mt="1rem"
+                fontSize={{ base: "lg", "2xl": "xl" }}
+                lineHeight="2.2rem"
+              >
+                {locale === "en-US"
+                ? english.about.about.first
+                : spanish.about.about.first}
+                <br />
+                {locale === "en-US"
+                ? english.about.about.second
+                : spanish.about.about.second}
+                <br />
+                {locale === "en-US"
+                ? english.about.about.third
+                : spanish.about.about.third}
+                <br />
+                {locale === "en-US"
+                ? english.about.about.fourth
+                : spanish.about.about.fourth}
+              </Text>
+            </TabPanel>
+            <TabPanel px="1rem">
+              <Text
+                maxW="500px"
+                color="primary"
+                fontWeight="bold"
+                fontFamily={theme.fonts.primary}
+                fontSize={{ base: "lg", "2xl": "2xl" }}
+                mt="1rem"
+              >
+                {locale === "en-US"
+                ? english.about.skills.first
+                : spanish.about.skills.first}
+              </Text>
+              <Text
+                maxW="500px"
+                color="primary"
+                fontWeight="bold"
+                fontFamily={theme.fonts.primary}
+                fontSize={{ base: "lg", "2xl": "2xl" }}
+                mt="1rem"
+              >
+                • Frontend: ReactJS, NextJS, TypeScript, Redux & RTK Query,
+                ChakraUI, Bootstrap, Formik & Yup, framer-motion, y otros.
+              </Text>
+              <Text
+                maxW="500px"
+                color="primary"
+                fontWeight="bold"
+                fontFamily={theme.fonts.primary}
+                fontSize={{ base: "lg", "2xl": "2xl" }}
+                mt="1rem"
+              >
+                • Backend: NodeJS, Express, Mongoose, Jest, Prisma, y otros.
+              </Text>
+              <Text
+                maxW="500px"
+                color="primary"
+                fontWeight="bold"
+                fontFamily={theme.fonts.primary}
+                fontSize={{ base: "lg", "2xl": "2xl" }}
+                mt="1rem"
+              >
+                • Databases: MongoDB, MySQL, PostgreSQL.
+              </Text>
+              <Text
+                maxW="500px"
+                color="primary"
+                fontWeight="bold"
+                fontFamily={theme.fonts.primary}
+                fontSize={{ base: "lg", "2xl": "2xl" }}
+                mt="1rem"
+              >
+                • Other technologies: Git, GitHub, Trello, Postman, Jira.
+              </Text>
+            </TabPanel>
+            <TabPanel px="1rem">
+              <Box fontFamily={theme.fonts.primary} w="100%">
+                <UnorderedList spacing={3}>
+                  <ListItem>
+                    <Text
+                      fontSize={{ base: "lg", "2xl": "2xl" }}
+                      color="primary"
+                      fontWeight="bold"
+                      mt="1rem"
+                    >
+                      Job Ready
+                    </Text>
+                    <Flex align="center" gap="3">
+                      <Text color="primary" fontWeight="italics">
+                        - Alkemy
+                      </Text>
+                      <a
+                        href="https://www.twitter.com"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <AttachmentIcon
+                          _hover={{ color: "tertiary" }}
+                          transition="all .2s ease"
+                        />
+                      </a>
+                    </Flex>
+                  </ListItem>
+                  <ListItem>
+                    <Text
+                      fontSize={{ base: "lg", "2xl": "2xl" }}
+                      color="primary"
+                      fontWeight="bold"
+                      mt="1rem"
+                    >
+                      Front-end Engineer
+                    </Text>
+                    <Flex align="center" gap="3">
+                      <Text color="primary" fontWeight="italics">
+                        - Codecademy
+                      </Text>
+                      <a
+                        href="https://www.twitter.com"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {/* <AttachmentIcon
+                          _hover={{ color: "tertiary" }}
+                          transition="all .2s ease"
+                        /> */}
+                      </a>
+                    </Flex>
+                  </ListItem>
+                  <ListItem>
+                    <Text
+                      fontSize={{ base: "lg", "2xl": "2xl" }}
+                      color="primary"
+                      fontWeight="bold"
+                      mt="1rem"
+                    >
+                      EF SET English Certificate (C 2)
+                    </Text>
+                    <Flex align="center" gap="3">
+                      <Text color="primary" fontWeight="italics">
+                        - EF SET
+                      </Text>
+                      <a
+                        href="https://www.twitter.com"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <AttachmentIcon
+                          _hover={{ color: "tertiary" }}
+                          transition="all .2s ease"
+                        />
+                      </a>
+                    </Flex>
+                  </ListItem>
+                  <ListItem>
+                    <Text
+                      fontSize={{ base: "lg", "2xl": "2xl" }}
+                      color="primary"
+                      fontWeight="bold"
+                      mt="1rem"
+                    >
+                      Sé Programar
+                    </Text>
+                    <Flex align="center" gap="3">
+                      <Text color="primary" fontWeight="italics">
+                        - Argentina Programa
+                      </Text>
+                      <a
+                        href="https://www.twitter.com"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <AttachmentIcon
+                          _hover={{ color: "tertiary" }}
+                          transition="all .2s ease"
+                        />
+                      </a>
+                    </Flex>
+                  </ListItem>
+                  <ListItem>
+                    <Text
+                      fontSize={{ base: "lg", "2xl": "2xl" }}
+                      color="primary"
+                      fontWeight="bold"
+                      mt="1rem"
+                    >
+                      Inglés Adolescente
+                    </Text>
+                    <Text color="primary" fontWeight="thin">
+                      - Josefina Contte (2012 - 2017)
+                    </Text>
+                  </ListItem>
+                </UnorderedList>
+              </Box>
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
+      </Flex>
+    </>
+  );
+}
+
+export default TabAbout;

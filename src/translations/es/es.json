@@ -1,0 +1,58 @@
+{
+  "main": {
+    "heading": {
+      "first": "Hola, soy"
+    },
+    "button": {
+      "first": "Descargar CV",
+      "second": "Contáctame"
+    }
+  },
+  "about": {
+    "heading": {
+      "first": "Sobre mi",
+      "second": "Acerca",
+      "third": "Habilidades",
+      "fourth": "Certificaciones"
+    },
+    "about": {
+      "first": "Tengo 22 años, soy de Corrientes Argentina.",
+      "second": "Empecé a indagar en la programación hace más de un año, y desde entonces que me vengo formando como desarrollador web, aprendiendo cada día.",
+      "third": "Tengo experiencia desarrollando E-Commerces, Landing pages y Web Apps. Me desenvuelvo mejor en el Front-end pero ya hace unos meses que estoy adentrándome en el Back-end.",
+      "fourth": "Desde chico que soy fanático de la tecnología, los juegos y la ciencia, siempre estoy dispuesto a conversar sobre estos tópicos."
+    },
+    "skills": {
+      "first": "Algunas de las tecnologías que utilicé son:"
+    }
+  },
+  "projects": {
+    "heading": {
+      "first": "Proyectos",
+      "second": "En esta sección hé recopilado algunos de los proyectos en los que trabajé, tanto personales como profesionales."
+    },
+    "projects": {
+      "first": {
+        "name": "E-Commerce",
+        "description": "E-Commerce developed with React, Redux, Node, Express and PostgreSQL.",
+        "link": "a"
+      }
+    }
+  },
+  "contact": {
+    "heading": {
+      "first": "Contáctame",
+      "second": "Envíame un mensaje"
+    },
+    "input": {
+      "first": "Nombre",
+      "second": "Email",
+      "third": "Deja un mensaje"
+    }
+  },
+  "sidebar": {
+    "first": "Inicio",
+    "second": "Sobre mi",
+    "third": "Proyectos",
+    "fourth": "Contacto"
+  }
+}

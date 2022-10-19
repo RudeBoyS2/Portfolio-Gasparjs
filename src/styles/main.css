@@ -1,0 +1,36 @@
+* {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    scroll-behavior: smooth;
+}
+* ::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.carousel-slider {
+    /* height: fit-content; */
+    height: 100%;
+    padding: 50px;
+}
+
+.carousel-container {
+    height: 75vh;
+    /* padding: 0px 20px; */
+    /* margin-left: 70px;
+    margin-right: 70px; */
+}
+
+.carousel-item {
+    margin: auto;
+}
+
+.Typewriter {
+    color: #495dee;
+}
+
+@media screen and (max-width: 1300px) {
+    .carousel-container {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+}
