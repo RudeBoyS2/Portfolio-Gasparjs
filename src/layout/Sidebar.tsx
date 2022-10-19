@@ -245,6 +245,16 @@ const Sidebar = () => {
         zIndex="1"
         display={["none", "none", "none", "flex", "flex"]}
       >
+        <Button position="absolute" right="0" bg="none"
+          _hover={{ bg: "none" }}
+          _active={{ border: "none" }}
+          aria-label="switch language button"
+          color="secondary"
+          fontSize="xl">
+          <NextLink href={locale === "en-US" ? "/" : "/en-US"} locale={locale === "en-US" ? "es-AR" : "en-US"}>
+            {locale === "en-US" ? "EN" : "ES"}
+          </NextLink>
+        </Button>
         <Grid h="20vh" justifyContent="center" alignContent="center">
           <Flex w="25vw" p="3rem" justifyContent="space-between">
             <Box
