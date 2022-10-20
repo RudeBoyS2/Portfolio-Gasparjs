@@ -6,51 +6,57 @@ import english from "../translations/en/en.json";
 import spanish from "../translations/es/es.json";
 
 function About() {
-  const { locale } = useRouter()
+  const { locale } = useRouter();
   const theme = useTheme();
-  
+
   return (
     <>
       <Flex
         flexDir="column"
+        width="100%"
         height="100vh"
         position="relative"
         zIndex="5"
         justifyContent="center"
-        gap="2rem"
+        gap={{ base: "2rem", lg: "6", xl: "2rem" }}
         alignContent="center"
         bg="secondary"
         id="about"
-        p="4rem"
-        width="100%"
+        mt="8"
         // width="inherit"
       >
         <Text
-          fontSize={{ base: "4xl", "2xl": "7xl" }}
+          fontSize={{ base: "4xl", lg: "3xl", "2xl": "7xl" }}
           fontFamily={theme.fonts.secondary}
           textAlign="center"
-          mt="8"
           mb={{ "2xl": "20" }}
+          py={{ base: 0, lg: "3rem", xl: 0 }}
+          h="50px"
         >
-          {locale === "en-US" ? english.about.heading.first : spanish.about.heading.first}
+          {locale === "en-US"
+            ? english.about.heading.first
+            : spanish.about.heading.first}
         </Text>
         <Flex
           alignSelf="center"
-          flexDir={["column", "column", "column", "column", "row"]}
+          flexDir={{ base: "column", xl: "row" }}
           justifyContent="space-around"
           gap="2rem"
           width={{ "2xl": "75vw" }}
           mb={{ "2xl": "32" }}
         >
           <TabAbout />
-          <Flex justifyContent="center" alignContent="center">
+          <Flex
+            display={{ base: "none", xl: "block" }}
+            justifyContent="center"
+            alignContent="center"
+            alignSelf="center"
+          >
             <Image
               src="https://res.cloudinary.com/diylksocz/image/upload/v1663859544/undraw_programming_re_kg9v_m1tcvj.svg"
               maxW={{ base: "334px", "2xl": "550px" }}
               maxH={{ base: "236px", "2xl": "550px" }}
-              alignSelf="center"
               alt="programmer"
-              display={{ base: "none", xl: "block" }}
             />
           </Flex>
         </Flex>

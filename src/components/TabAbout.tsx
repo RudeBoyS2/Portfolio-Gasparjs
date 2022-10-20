@@ -27,7 +27,7 @@ function TabAbout() {
         <Tabs w="500px" h="525px" size="lg">
           <TabList fontFamily={theme.fonts.secondary} justifyContent="center">
             <Tab
-              fontSize={["lg", "lg", "lg", "lg", "lg", "3xl"]}
+              fontSize={["lg", "lg", "lg", "md", "lg", "3xl"]}
               _selected={{ color: "tertiary" }}
               _active={{ bg: "none" }}
             >
@@ -36,7 +36,7 @@ function TabAbout() {
                 : spanish.about.heading.second}
             </Tab>
             <Tab
-              fontSize={["lg", "lg", "lg", "lg", "lg", "3xl"]}
+              fontSize={["lg", "lg", "lg", "md", "lg", "3xl"]}
               _selected={{ color: "tertiary" }}
               _active={{ bg: "none" }}
             >
@@ -45,7 +45,7 @@ function TabAbout() {
                 : spanish.about.heading.third}
             </Tab>
             <Tab
-              fontSize={["lg", "lg", "lg", "lg", "lg", "3xl"]}
+              fontSize={["lg", "lg", "lg", "md", "lg", "3xl"]}
               _selected={{ color: "tertiary" }}
               _active={{ bg: "none" }}
             >
@@ -60,7 +60,7 @@ function TabAbout() {
               <Flex gap="1vw" flexWrap="wrap">
                 <Text
                   color="primary"
-                  fontSize={{ base: "xl", md: "2xl", "2xl": "26px" }}
+                  fontSize={{ base: "xl", md: "2xl", lg: "xl", "2xl": "26px" }}
                   fontWeight="bold"
                 >
                   Gaspar Escobar{" | "}Fullstack Developer
@@ -72,7 +72,7 @@ function TabAbout() {
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
                 mt="1rem"
-                fontSize={{ base: "lg", "2xl": "xl" }}
+                fontSize={{ base: "lg", lg: "md", xl: "lg", "2xl": "xl" }}
                 lineHeight="2.2rem"
               >
                 {locale === "en-US"
@@ -160,7 +160,7 @@ function TabAbout() {
                       Job Ready
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontWeight="italics">
+                      <Text color="primary" fontWeight="thin">
                         - Alkemy
                       </Text>
                       <a
@@ -185,7 +185,7 @@ function TabAbout() {
                       Front-end Engineer
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontWeight="italics">
+                      <Text color="primary" fontWeight="thin">
                         - Codecademy
                       </Text>
                       <a
@@ -210,7 +210,7 @@ function TabAbout() {
                       EF SET English Certificate (C 2)
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontWeight="italics">
+                      <Text color="primary" fontWeight="thin">
                         - EF SET
                       </Text>
                       <a
@@ -235,7 +235,7 @@ function TabAbout() {
                       Sé Programar
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontWeight="italics">
+                      <Text color="primary" fontWeight="thin">
                         - Argentina Programa
                       </Text>
                       <a

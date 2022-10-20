@@ -56,17 +56,18 @@ function Contact() {
         minH="100vh"
         position="relative"
         zIndex="10"
-        justifyContent="center"
-        alignContent="center"
+        justify="center"
+        align="center"
         bg="secondary"
         id="contact"
-        flexDir={{ base: "column", lg: "row" }}
+        flexDir={{ base: "column", xl: "row" }}
         py="4rem"
       >
         <Flex
           gap="5rem"
           flexWrap={{ base: "wrap", lg: "nowrap" }}
-          justifyContent="center"
+          justify="center"
+          height="fit-content"
         >
           <Flex
             w={{ base: "350px", sm: "350px", xl: "400px", "2xl": "400px" }}

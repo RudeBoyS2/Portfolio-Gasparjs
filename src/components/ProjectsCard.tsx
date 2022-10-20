@@ -79,8 +79,8 @@ function ProjectsCard({
         </ModalContent>
       </Modal>
       <Grid
-        w={{ base: "300px", "2xl": "400px" }}
-        h={{ base: "450px", "2xl": "500px" }}
+        w={{ base: "300px", lg: "270px", xl: "300px", "2xl": "400px" }}
+        h={{ base: "450px", lg: "400px", xl: "450px", "2xl": "500px" }}
         boxShadow="xl"
         margin="auto"
         mb={{ "2xl": "20" }}
@@ -97,12 +97,12 @@ function ProjectsCard({
           <Image
             src={src}
             w={{ base: "300px", "2xl": "400px" }}
-            h="200px"
+            h={{lg: "150px", xl: "200px"}}
             objectFit="fill"
             alt={title}
           />
-          <Grid p="0.5rem" gap="0.5rem">
-            <Box>
+          <Flex p="0.5rem" gap="0.5rem" flexDir="column">
+            
               <Text
                 fontFamily={theme.fonts.secondary}
                 textAlign="center"
@@ -119,7 +119,6 @@ function ProjectsCard({
               >
                 {type}
               </Text>
-            </Box>
             <Text
               textAlign="center"
               fontFamily={theme.fonts.primary}
@@ -128,7 +127,7 @@ function ProjectsCard({
             >
               {briefDescription}
             </Text>
-          </Grid>
+          </Flex>
         </Flex>
       </Grid>
     </>

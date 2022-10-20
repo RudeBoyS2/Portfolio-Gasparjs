@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       </Head>
 
       {/* <Flex w={{base: "fit-content", sm: "100%"}}> */}
-      <Flex>
+      <Flex w="fit-content">
         <Flex w={{lg: "25vw"}}>
         <Sidebar />
         </Flex>

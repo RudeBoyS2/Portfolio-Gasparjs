@@ -19,7 +19,7 @@ const Main = () => {
         position="relative"
         zIndex="5"
         id="/"
-        px={["5rem", "5rem"]}
+        // px={["5rem", "5rem"]}
         flexDir="column"
         alignContent="center"
         justifyContent="center"
@@ -133,7 +133,7 @@ const Main = () => {
         <Flex
           w="100%"
           justifyContent="space-around"
-          mb={{ base: "3rem", "2xl": "auto" }}
+          mb={{ base: "3rem", lg: "6rem", xl: "3rem", "2xl": "auto" }}
           flexDir="column"
           gap="2rem"
           mt={{ base: "auto", lg: "10", xl: "auto", "2xl": "auto" }}
