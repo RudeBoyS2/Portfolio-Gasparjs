@@ -51,7 +51,7 @@ export type Project = {
         description: "Landing page creadada con NextJS, Typescript y ChakraUI. Esta página fue creada para mostrar mis proyectos y mi información personal.",
         src: "https://res.cloudinary.com/dxgrn0qtx/image/upload/v1666223856/ad1c067b3f6a2b1db5a661b24d5057bb_isqs8f.png",
         stack: "NextJS, Typescript, ChakraUI",
-        github: "github",
-        web: "web"
+        github: "https://github.com/RudeBoyS2/Portfolio-Gasparjs",
+        web: "https://gasparjs.vercel.app/"
     },
   }
