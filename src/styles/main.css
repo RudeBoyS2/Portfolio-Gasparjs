@@ -15,10 +15,21 @@
 
 .carousel-container {
     height: 75vh;
+    position: unset;
     /* padding: 0px 20px; */
     /* margin-left: 70px;
     margin-right: 70px; */
 }
+
+.react-multi-carousel-track {
+    position: unset !important;
+}
+
+.react-multi-carousel-list {
+    position: unset !important;
+}
+
+
 
 .carousel-item {
     margin: auto;

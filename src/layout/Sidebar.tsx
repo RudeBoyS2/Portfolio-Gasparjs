@@ -38,7 +38,7 @@ const Sidebar = () => {
   return (
     <>
       {/* MOBILE START */}
-      <Box position="fixed" zIndex="100" h="-webkit-fill-available">
+      <Box position="fixed" zIndex="100" h="100vh">
         <Button
           {...getButtonProps()}
           px="3"
@@ -96,7 +96,7 @@ const Sidebar = () => {
           position="absolute"
           left="0"
           top="0"
-          height="-webkit-fill-available"
+          height="100vh"
         >
           <Grid h="20vh" justifyContent="center" alignContent="center">
             <Flex w="100%" p="3rem" justifyContent="space-between">

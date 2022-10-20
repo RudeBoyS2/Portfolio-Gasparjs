@@ -24,9 +24,10 @@ function TabAbout() {
   return (
     <>
       <Flex justifyContent="center">
-        <Tabs w="500px" h="525px" size="lg">
-          <TabList fontFamily={theme.fonts.secondary} justifyContent="center">
+        <Tabs maxW="500px" size="lg">
+          <TabList fontFamily={theme.fonts.secondary} justifyContent="space-evenly">
             <Tab
+              p="0"
               fontSize={["lg", "lg", "lg", "md", "lg", "3xl"]}
               _selected={{ color: "tertiary" }}
               _active={{ bg: "none" }}
@@ -36,6 +37,7 @@ function TabAbout() {
                 : spanish.about.heading.second}
             </Tab>
             <Tab
+            p="0"
               fontSize={["lg", "lg", "lg", "md", "lg", "3xl"]}
               _selected={{ color: "tertiary" }}
               _active={{ bg: "none" }}
@@ -45,6 +47,7 @@ function TabAbout() {
                 : spanish.about.heading.third}
             </Tab>
             <Tab
+            p="0"
               fontSize={["lg", "lg", "lg", "md", "lg", "3xl"]}
               _selected={{ color: "tertiary" }}
               _active={{ bg: "none" }}
@@ -56,7 +59,7 @@ function TabAbout() {
           </TabList>
 
           <TabPanels>
-            <TabPanel px="1rem">
+            <TabPanel>
               <Flex gap="1vw" flexWrap="wrap">
                 <Text
                   color="primary"
@@ -72,7 +75,7 @@ function TabAbout() {
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
                 mt="1rem"
-                fontSize={{ base: "lg", lg: "md", xl: "lg", "2xl": "xl" }}
+                fontSize={{ base: "md", lg: "md", xl: "lg", "2xl": "xl" }}
                 lineHeight="2.2rem"
               >
                 {locale === "en-US"
@@ -92,7 +95,7 @@ function TabAbout() {
                 : spanish.about.about.fourth}
               </Text>
             </TabPanel>
-            <TabPanel px="1rem">
+            <TabPanel>
               <Text
                 maxW="500px"
                 color="primary"
@@ -147,7 +150,7 @@ function TabAbout() {
                 • Other technologies: Git, GitHub, Trello, Postman, Jira.
               </Text>
             </TabPanel>
-            <TabPanel px="1rem">
+            <TabPanel>
               <Box fontFamily={theme.fonts.primary} w="100%">
                 <UnorderedList spacing={3}>
                   <ListItem>

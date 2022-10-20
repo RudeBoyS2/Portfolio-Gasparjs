@@ -15,7 +15,8 @@ const Main = () => {
   return (
     <>
       <Flex
-        h={{ base: "auto", sm: "100vh" }}
+        h="100vh"
+        w={{ base: "100vw", sm: "auto" }}
         position="relative"
         zIndex="5"
         id="/"
@@ -32,12 +33,12 @@ const Main = () => {
           gap={{ base: "0", sm: "4rem", "2xl": "1rem" }}
           h={{ sm: "350px" }}
           w="100%"
-          mt={{ base: "14", "2xl": "14" }}
+          mt={{"2xl": "14" }}
         >
           <Flex flexDir="column" alignSelf="center" minW="50%" ml={{ lg: "6" }}>
             <Text
               fontSize={{
-                base: "4xl",
+                base: "34px",
                 sm: "4xl",
                 md: "3xl",
                 lg: "3xl",
@@ -53,7 +54,7 @@ const Main = () => {
             </Text>
             <Text
               fontSize={{
-                base: "5xl",
+                base: "44px",
                 sm: "5xl",
                 md: "38px",
                 lg: "4xl",
@@ -70,7 +71,7 @@ const Main = () => {
               justify="center"
               align="baseline"
               fontSize={{
-                base: "4xl",
+                base: "34px",
                 sm: "4xl",
                 md: "3xl",
                 lg: "3xl",
@@ -102,10 +103,10 @@ const Main = () => {
           <Image
             alignSelf="center"
             alt="Gaspar Escobar"
-            src="https://res.cloudinary.com/diylksocz/image/upload/v1664344093/Coding__Flatline_yi54yu.png"
+            src="https://res.cloudinary.com/dxgrn0qtx/image/upload/v1666311482/aaa_saoxjf.png"
             fit="cover"
-            h={{ base: "400px", sm: "400px" }}
-            w={{ base: "500px", sm: "400px", lg: "auto", "2xl": "600px" }}
+            h={{ base: "300px", sm: "350px" }}
+            w={{base: "300px", sm: "350px", lg: "auto", "2xl": "600px" }}
             position="relative"
             display={{ base: "block", sm: "none", md: "block" }}
           />
@@ -114,8 +115,6 @@ const Main = () => {
         <Flex
           justifyContent="center"
           gap="2rem"
-          my="auto"
-          // mb={{ base: "20", sm: "auto" }}
           alignSelf="center"
         >
           <a
@@ -132,11 +131,12 @@ const Main = () => {
         </Flex>
         <Flex
           w="100%"
+          mt="6"
           justifyContent="space-around"
-          mb={{ base: "3rem", lg: "6rem", xl: "3rem", "2xl": "auto" }}
+          // mb={{ base: "3rem", lg: "6rem", xl: "3rem", "2xl": "auto" }}
           flexDir="column"
           gap="2rem"
-          mt={{ base: "auto", lg: "10", xl: "auto", "2xl": "auto" }}
+          // mt={{ base: "auto", lg: "10", xl: "auto", "2xl": "auto" }}
           p="1rem"
         >
           <Flex justifyContent="center" gap="1rem" flexWrap="wrap">
@@ -171,10 +171,7 @@ const Main = () => {
             <TechsIcon
               src="https://res.cloudinary.com/diylksocz/image/upload/v1663857068/rzylUjaf_400x400-removebg-preview_r2o3jt.png"
               alt="chakra logo"
-            />
-            <TechsIcon
-              src="https://res.cloudinary.com/diylksocz/image/upload/v1663857113/Tailwind_CSS_Logo.svg_lpcn16.png"
-              alt="tailwind logo"
+              width="none"
             />
           </Flex>
 

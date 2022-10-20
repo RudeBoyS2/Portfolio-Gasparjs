@@ -7,11 +7,12 @@ function Button({content}: any) {
   return (
     <>
       <Flex
-        mb={{base: "10", lg: "4"}}
+        mb={{lg: "4"}}
+        h="64px"
         justify="center"
         as={motion.button}
-        w={{base: "180px", "2xl": "200px"}}
-        h={{"2xl": "100px"}}
+        w={{base: "155px", sm: "180px", "2xl": "200px"}}
+        // h={{"2xl": "100px"}}
         drag="x"
         dragConstraints={{ left: -100, right: 100 }}
         whileHover={{ scale: 1.1 }}
@@ -25,7 +26,7 @@ function Button({content}: any) {
       >
         <Text
           fontFamily={theme.fonts.secondary}
-          fontSize={{base: "xl", "2xl": "2xl"}}
+          fontSize={{base: "md", sm: "xl", "2xl": "2xl"}}
           alignSelf="center"
         >
           {content}

@@ -22,7 +22,7 @@ function About() {
         alignContent="center"
         bg="secondary"
         id="about"
-        mt="8"
+        // mt="8"
         // width="inherit"
       >
         <Text

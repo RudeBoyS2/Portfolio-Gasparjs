@@ -43,7 +43,7 @@ function Projects() {
       >
         <Box p="2rem" h="25vh" mt={{base: "0", sm: "0", "2xl": "28"}}>
           <Text
-            fontSize={{base: "4xl", sm: "3xl", md: "4xl", lg: "3xl", xl: "4xl", "2xl": "7xl"}}
+            fontSize={{base: "4xl", sm: "4xl", md: "4xl", lg: "3xl", xl: "4xl", "2xl": "7xl"}}
             fontFamily={theme.fonts.secondary}
             textAlign="center"
           >
@@ -52,7 +52,7 @@ function Projects() {
                 : spanish.projects.heading.first}
           </Text>
           <Text
-            fontSize={{base: "xl", sm: "lg", md: "xl", lg: "lg", xl: "xl", "2xl": "4xl"}}
+            fontSize={{base: "xl", sm: "md", md: "xl", lg: "lg", xl: "xl", "2xl": "4xl"}}
             fontFamily={theme.fonts.primary}
             color="#505050"
             textAlign="center"

@@ -5,7 +5,7 @@ type Props = {
   src: string;
   alt: string;
   width?: string;
-}
+};
 
 function TechsIcon({ src, alt, width }: Props) {
   return (

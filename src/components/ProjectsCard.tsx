@@ -79,8 +79,8 @@ function ProjectsCard({
         </ModalContent>
       </Modal>
       <Grid
-        w={{ base: "300px", lg: "270px", xl: "300px", "2xl": "400px" }}
-        h={{ base: "450px", lg: "400px", xl: "450px", "2xl": "500px" }}
+        w={{ sm: "300px", lg: "270px", xl: "300px", "2xl": "400px" }}
+        h={{ sm: "450px", lg: "400px", xl: "450px", "2xl": "500px" }}
         boxShadow="xl"
         margin="auto"
         mb={{ "2xl": "20" }}
@@ -89,7 +89,6 @@ function ProjectsCard({
           cursor="pointer"
           onClick={onOpen}
           _hover={{ transform: "scale(1.05)", transition: "ease 0.3s" }}
-          gap="1rem"
           bg="#fff"
           flexDir="column"
           rounded="xl"
@@ -97,7 +96,7 @@ function ProjectsCard({
           <Image
             src={src}
             w={{ base: "300px", "2xl": "400px" }}
-            h={{lg: "150px", xl: "200px"}}
+            h={{base: "170px", xl: "200px"}}
             objectFit="fill"
             alt={title}
           />

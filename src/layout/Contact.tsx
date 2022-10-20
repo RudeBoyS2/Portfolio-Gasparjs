@@ -70,7 +70,7 @@ function Contact() {
           height="fit-content"
         >
           <Flex
-            w={{ base: "350px", sm: "350px", xl: "400px", "2xl": "400px" }}
+            w={{ base: "350px", sm: "400px", xl: "400px", "2xl": "400px" }}
             flexDir="column"
             p="2rem"
             fontFamily={theme.fonts.primary}
@@ -85,7 +85,7 @@ function Contact() {
               alignSelf="center"
               fontSize={{
                 base: "2xl",
-                sm: "22px",
+                sm: "3xl",
                 md: "2xl",
                 lg: "2xl",
                 xl: "3xl",
@@ -152,7 +152,7 @@ function Contact() {
           </Flex>
           <Flex
             maxH="auto"
-            w={{ base: "350px", sm: "350px", xl: "400px", "2xl": "400px" }}
+            w={{ base: "350px", sm: "400px", xl: "400px", "2xl": "400px" }}
             flexDir="column"
             p="2rem"
             fontFamily={theme.fonts.primary}
@@ -164,7 +164,7 @@ function Contact() {
             <Text
               fontSize={{
                 base: "2xl",
-                sm: "22px",
+                sm: "3xl",
                 md: "2xl",
                 lg: "2xl",
                 xl: "3xl",
