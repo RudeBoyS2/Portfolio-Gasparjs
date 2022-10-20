@@ -38,7 +38,7 @@ const Sidebar = () => {
   return (
     <>
       {/* MOBILE START */}
-      <Box position="fixed" zIndex="100">
+      <Box position="fixed" zIndex="100" h="-webkit-fill-available">
         <Button
           {...getButtonProps()}
           px="3"
@@ -53,37 +53,50 @@ const Sidebar = () => {
           color={isOpen ? "secondary" : "primary"}
         >
           {!isOpen ? (
-            <HamburgerIcon w={{base: "30px", sm: "20px"}} h={{base: "30px", sm: "20px"}} />
+            <HamburgerIcon
+              w={{ base: "30px", sm: "20px" }}
+              h={{ base: "30px", sm: "20px" }}
+            />
           ) : (
-            <CloseIcon w={{base: "30px", sm: "20px"}} h={{base: "30px", sm: "20px"}} />
+            <CloseIcon
+              w={{ base: "30px", sm: "20px" }}
+              h={{ base: "30px", sm: "20px" }}
+            />
           )}
         </Button>
-        <Button position="absolute" right="0" bg="none"
+        <Button
+          position="absolute"
+          right="0"
+          bg="none"
           _hover={{ bg: "none" }}
           _active={{ border: "none" }}
           aria-label="switch language button"
           color="secondary"
-          fontSize="xl">
-          <NextLink href={locale === "en-US" ? "/" : "/en-US"} locale={locale === "en-US" ? "es-AR" : "en-US"}>
+          fontSize="xl"
+        >
+          <NextLink
+            href={locale === "en-US" ? "/" : "/en-US"}
+            locale={locale === "en-US" ? "es-AR" : "en-US"}
+          >
             {locale === "en-US" ? "EN" : "ES"}
           </NextLink>
         </Button>
-        <motion.div
+        <Flex
+          as={motion.div}
           {...getDisclosureProps()}
           hidden={hidden}
           initial={false}
           onAnimationStart={() => setHidden(false)}
           onAnimationComplete={() => setHidden(!isOpen)}
           animate={{ width: isOpen ? 300 : 0 }}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            background: "#141516",
-            overflow: "hidden",
-            left: "0",
-            height: "100vh",
-            top: "0",
-          }}
+          display={{lg: "none"}}
+          flexDirection="column"
+          bg="primary"
+          overflow="hidden"
+          position="absolute"
+          left="0"
+          top="0"
+          height="-webkit-fill-available"
         >
           <Grid h="20vh" justifyContent="center" alignContent="center">
             <Flex w="100%" p="3rem" justifyContent="space-between">
@@ -181,6 +194,11 @@ const Sidebar = () => {
             mt="auto"
             justifyContent="center"
             alignContent="center"
+            position="absolute"
+            left="0"
+            bottom="0"
+            right="0"
+
           >
             <Flex gap="3rem">
               <Link
@@ -224,39 +242,40 @@ const Sidebar = () => {
               </Link>
             </Flex>
           </Grid>
-        </motion.div>
+        </Flex>
       </Box>
       {/* MOBILE END */}
 
       {/* DESKTOP */}
-      <Box
-        w="25vw"
-        minH="100vh"
-        display={{ base: "none", lg: "flex" }}
-        zIndex="1"
-      />
       <Flex
         w="25vw"
-        h="100vh"
+        minH="100vh"
         bg="primary"
         alignContent="space-between"
         flexDir="column"
         position="fixed"
-        zIndex="1"
-        display={["none", "none", "none", "flex", "flex"]}
+        zIndex="10"
+        display={{ base: "none", lg: "flex" }}
       >
-        <Button position="absolute" right="0" bg="none"
+        <Button
+          position="absolute"
+          right="0"
+          bg="none"
           _hover={{ bg: "none" }}
           _active={{ border: "none" }}
           aria-label="switch language button"
           color="secondary"
-          fontSize="xl">
-          <NextLink href={locale === "en-US" ? "/" : "/en-US"} locale={locale === "en-US" ? "es-AR" : "en-US"}>
+          fontSize="xl"
+        >
+          <NextLink
+            href={locale === "en-US" ? "/" : "/en-US"}
+            locale={locale === "en-US" ? "es-AR" : "en-US"}
+          >
             {locale === "en-US" ? "EN" : "ES"}
           </NextLink>
         </Button>
-        <Grid h="20vh" justifyContent="center" alignContent="center">
-          <Flex w="25vw" p="3rem" justifyContent="space-between">
+        <Grid h="20vh" w="100%" justifyContent="center" alignContent="center">
+          <Flex w="100%" p="3rem" justifyContent="space-between">
             <Box
               w={{ base: "70px", "2xl": "150px" }}
               h={{ base: "70px", "2xl": "150px" }}

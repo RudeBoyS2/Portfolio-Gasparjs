@@ -11,7 +11,8 @@ function About() {
   
   return (
     <>
-      <Grid
+      <Flex
+        flexDir="column"
         height="100vh"
         position="relative"
         zIndex="5"
@@ -21,7 +22,8 @@ function About() {
         bg="secondary"
         id="about"
         p="4rem"
-        width="inherit"
+        width="100%"
+        // width="inherit"
       >
         <Text
           fontSize={{ base: "4xl", "2xl": "7xl" }}
@@ -52,7 +54,7 @@ function About() {
             />
           </Flex>
         </Flex>
-      </Grid>
+      </Flex>
     </>
   );
 }

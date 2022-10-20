@@ -1,12 +1,20 @@
 import { extendTheme } from "@chakra-ui/react";
-import "@fontsource/arimo/500.css"
-import "@fontsource/poppins/700.css"
+import "@fontsource/arimo/500.css";
+import "@fontsource/poppins/700.css";
 
 const theme = extendTheme({
-    fonts: {
-        primary: "Arimo",
-        secondary: "Poppins",
+  styles: {
+    global: {
+      "html, body, #root, main": {
+        height: "100%",
+        width: "100%",
       },
+    },
+  },
+  fonts: {
+    primary: "Arimo",
+    secondary: "Poppins",
+  },
   colors: {
     primary: "#141516",
     secondary: "#495dee",

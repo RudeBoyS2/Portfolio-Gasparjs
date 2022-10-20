@@ -115,7 +115,7 @@ const Main = () => {
           justifyContent="center"
           gap="2rem"
           my="auto"
-          mb={{ base: "20", sm: "auto" }}
+          // mb={{ base: "20", sm: "auto" }}
           alignSelf="center"
         >
           <a

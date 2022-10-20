@@ -52,7 +52,7 @@ function Contact() {
   const toast = useToast();
   return (
     <>
-      <Grid
+      <Flex
         minH="100vh"
         position="relative"
         zIndex="10"
@@ -60,7 +60,7 @@ function Contact() {
         alignContent="center"
         bg="secondary"
         id="contact"
-        autoFlow={["row", "row", "row", "column", "column"]}
+        flexDir={{ base: "column", lg: "row" }}
         py="4rem"
       >
         <Flex
@@ -234,7 +234,7 @@ function Contact() {
             </form>
           </Flex>
         </Flex>
-      </Grid>
+      </Flex>
     </>
   );
 }
