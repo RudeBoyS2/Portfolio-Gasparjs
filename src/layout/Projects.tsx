@@ -34,14 +34,15 @@ function Projects() {
   return (
     <>
       <Grid
-        h="100vh"
+        minH="100vh"
+        maxH={{"2xl": "100vh"}}
         position="relative"
         zIndex="10"
         alignContent="center"
         id="Projects"
         backdropFilter="blur(1px)"
       >
-        <Box p="2rem" h="25vh" mt={{base: "0", sm: "0", "2xl": "28"}}>
+        <Box p="2rem" mt={{base: "0", sm: "0", "2xl": "28"}}>
           <Text
             fontSize={{base: "4xl", sm: "4xl", md: "4xl", lg: "3xl", xl: "4xl", "2xl": "7xl"}}
             fontFamily={theme.fonts.secondary}

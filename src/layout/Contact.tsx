@@ -3,7 +3,6 @@ import {
   Flex,
   FormControl,
   FormLabel,
-  Grid,
   Icon,
   Input,
   Text,
@@ -14,7 +13,7 @@ import {
 import { BsLinkedin } from "react-icons/bs";
 import { AiOutlineGithub, AiFillMail } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
-import React, { useState } from "react";
+import React, { FormEventHandler, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useRouter } from "next/router";
 import english from "../translations/en/en.json";
@@ -24,21 +23,23 @@ function Contact() {
   const { locale } = useRouter();
   const [button, setButton] = useState(false);
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
+    setButton(true);
+    console.log("hola")
     emailjs
       .sendForm(
-        "service_przmmqv",
-        "template_gcjvl3a",
-        e.target,
-        process.env.NEXT_PUBLIC_API_PUBLIC_KEY
+        `${process.env.NEXT_PUBLIC_SERVICE_KEY}`,
+        "template_i039ffz",
+        `#contact_form`,
+        `${process.env.NEXT_PUBLIC_API_KEY}`
       )
       .then((res) => {
         console.log(res);
         if (res.status === 200) {
           console.log(res);
           toast({
-            title: "Enviado exitosamente!.",
+            title: "Enviado exitosamente!",
             status: "success",
             duration: 9000,
             isClosable: true,
@@ -54,6 +55,7 @@ function Contact() {
     <>
       <Flex
         minH="100vh"
+        maxH={{"2xl": "100vh"}}
         position="relative"
         zIndex="10"
         justify="center"
@@ -174,10 +176,10 @@ function Contact() {
               alignSelf="center"
             >
               {locale === "en-US"
-              ? english.contact.heading.second
-              : spanish.contact.heading.second}
+                ? english.contact.heading.second
+                : spanish.contact.heading.second}
             </Text>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} id="contact_form">
               <FormControl>
                 <FormLabel fontSize={{ base: "lg", "2xl": "2xl" }} mt="2">
                   {locale === "en-US"
@@ -210,7 +212,7 @@ function Contact() {
                 </FormLabel>
                 <Textarea
                   name="message"
-                  id=""                  
+                  id=""
                   size={{ base: "md", "2xl": "md" }}
                   resize="none"
                 />
@@ -227,7 +229,7 @@ function Contact() {
                   color: "secondary",
                   border: "1px solid #495dee",
                 }}
-                onClick={() => setButton(true)}
+                // onClick={() => setButton(true)}
                 size={{ base: "md", "2xl": "lg" }}
               >
                 {locale === "en-US" ? "Send" : "Enviar"}

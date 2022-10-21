@@ -19,6 +19,7 @@ import {
 } from "@chakra-ui/react";
 import { AiOutlineGithub, AiOutlineGlobal } from "react-icons/ai";
 import type { Project } from "../utils/projectsMockES";
+import ChakraNextImage from "./ChakraNextImage";
 
 function ProjectsCard({
   title,
@@ -57,7 +58,7 @@ function ProjectsCard({
                 <>
                   <Link href={github} display="flex" alignItems="center" _hover={{textDecoration: "none"}} isExternal>
                     <Icon as={AiOutlineGithub} fill="secondary" fontSize="4xl" />
-                  <Text mr="3" fontSize="lg" fontFamily={theme.fonts.primary}>
+                  <Text mr="3" fontSize={{base: "sm", sm: "lg"}} fontFamily={theme.fonts.primary}>
                     : {github}
                   </Text>
                   </Link>
@@ -69,7 +70,7 @@ function ProjectsCard({
                 <>
                   <Link href={web} display="flex" alignItems="center" _hover={{textDecoration: "none"}} isExternal>
                     <Icon as={AiOutlineGlobal} fill="secondary" fontSize="4xl" />
-                  <Text mr="3" fontSize="lg" fontFamily={theme.fonts.primary}>
+                  <Text mr="3" fontSize={{base: "sm", sm: "lg"}} fontFamily={theme.fonts.primary}>
                     : {web}
                   </Text>
                   </Link>
@@ -77,13 +78,16 @@ function ProjectsCard({
               )}
             </Flex>
             </Flex>
-            <Image alt="project image" src={src} w="300px" h="300px" display={{base: "none", md: "block"}} />
+            <Flex minW="300px" h="300px" display={{base: "none", md: "block"}}>
+            <ChakraNextImage alt="project image" src={src} />
+            </Flex>
+            {/* <Image alt="project image" src={src} w="300px" h="300px" display={{base: "none", md: "block"}} /> */}
           </ModalBody>
         </ModalContent>
       </Modal>
       <Grid
-        w={{ sm: "300px", lg: "270px", xl: "300px", "2xl": "400px" }}
-        h={{ sm: "450px", lg: "400px", xl: "450px", "2xl": "500px" }}
+        w={{ base: "auto", sm: "300px", lg: "270px", xl: "290px", "2xl": "400px" }}
+        h={{ base: "460px", lg: "430px", xl: "430px", "2xl": "500px" }}
         boxShadow="xl"
         margin="auto"
         mb={{ "2xl": "20" }}
@@ -96,13 +100,15 @@ function ProjectsCard({
           flexDir="column"
           rounded="xl"
         >
-          <Image
+          <ChakraNextImage src={src}  w={{ base: "auto", sm: "300px", "2xl": "400px" }}
+            h={{base: "170px", xl: "200px"}} alt={title} />
+          {/* <Image
             src={src}
             w={{ base: "300px", "2xl": "400px" }}
             h={{base: "170px", xl: "200px"}}
             objectFit="fill"
             alt={title}
-          />
+          /> */}
           <Flex p="0.5rem" gap="0.5rem" flexDir="column">      
               <Text
                 fontFamily={theme.fonts.secondary}

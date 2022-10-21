@@ -24,7 +24,7 @@ function TabAbout() {
   return (
     <>
       <Flex justifyContent="center">
-        <Tabs w={{base: "100vw", sm: "450px"}} size="lg" h="75vh">
+        <Tabs w={{base: "100vw", sm: "450px", "2xl": "650px"}} size="lg" minH={{base: "75vh", "2xl": "auto"}}>
           <TabList fontFamily={theme.fonts.secondary} justifyContent="space-evenly">
             <Tab
               p="0"
@@ -75,8 +75,8 @@ function TabAbout() {
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
                 mt="1rem"
-                fontSize={{ base: "md", "2xl": "xl" }}
-                lineHeight={{base: "1.7rem", xl: "2rem"}}
+                fontSize={{ base: "md", "2xl": "2xl" }}
+                lineHeight={{base: "2rem", xl: "2rem", "2xl": "2.2rem"}}
               >
                 {locale === "en-US"
                 ? english.about.about.first
@@ -163,7 +163,7 @@ function TabAbout() {
                       Job Ready
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontWeight="thin">
+                      <Text color="primary" fontWeight="thin" fontSize={{"2xl": "xl"}}>
                         - Alkemy
                       </Text>
                       <a
@@ -188,7 +188,7 @@ function TabAbout() {
                       Front-end Engineer
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontWeight="thin">
+                      <Text color="primary" fontWeight="thin" fontSize={{"2xl": "xl"}}>
                         - Codecademy
                       </Text>
                       <a
@@ -213,7 +213,7 @@ function TabAbout() {
                       EF SET English Certificate (C 2)
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontWeight="thin">
+                      <Text color="primary" fontWeight="thin" fontSize={{"2xl": "xl"}}>
                         - EF SET
                       </Text>
                       <a
@@ -238,7 +238,7 @@ function TabAbout() {
                       Sé Programar
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontWeight="thin">
+                      <Text color="primary" fontWeight="thin" fontSize={{"2xl": "xl"}}>
                         - Argentina Programa
                       </Text>
                       <a
@@ -262,7 +262,7 @@ function TabAbout() {
                     >
                       Inglés Adolescente
                     </Text>
-                    <Text color="primary" fontWeight="thin">
+                    <Text color="primary" fontWeight="thin" fontSize={{"2xl": "xl"}}>
                       - Josefina Contte (2012 - 2017)
                     </Text>
                   </ListItem>

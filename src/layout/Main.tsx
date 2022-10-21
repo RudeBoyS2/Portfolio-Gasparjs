@@ -20,10 +20,9 @@ const Main = () => {
         position="relative"
         zIndex="5"
         id="/"
-        // px={["5rem", "5rem"]}
         flexDir="column"
         alignContent="center"
-        justifyContent="center"
+        justifyContent={{base: "center", "2xl": "space-evenly"}}
         backdropFilter="blur(1px)"
       >
         <Flex

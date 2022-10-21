@@ -14,11 +14,12 @@ function About() {
       <Flex
         flexDir="column"
         width="100%"
-        height="100vh"
+        minH="100vh"
         position="relative"
         zIndex="5"
         gap={{ base: "2rem", lg: "6", xl: "2rem" }}
         alignContent="center"
+        justifyContent="space-evenly"
         bg="secondary"
         id="about"
       >
