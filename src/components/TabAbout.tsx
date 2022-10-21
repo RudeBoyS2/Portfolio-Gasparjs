@@ -75,8 +75,8 @@ function TabAbout() {
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
                 mt="1rem"
-                fontSize={{ base: "md", lg: "md", xl: "lg", "2xl": "xl" }}
-                lineHeight="2.2rem"
+                fontSize={{ base: "md", "2xl": "xl" }}
+                lineHeight={{base: "1.7rem", xl: "2rem"}}
               >
                 {locale === "en-US"
                 ? english.about.about.first
@@ -101,7 +101,7 @@ function TabAbout() {
                 color="primary"
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
-                fontSize={{ base: "md", xl: "lg", "2xl": "2xl" }}
+                fontSize={{ base: "md", xl: "md", "2xl": "2xl" }}
                 mt="1rem"
               >
                 {locale === "en-US"
@@ -113,7 +113,7 @@ function TabAbout() {
                 color="primary"
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
-                fontSize={{ base: "md", xl: "lg", "2xl": "2xl" }}
+                fontSize={{ base: "md", xl: "md", "2xl": "2xl" }}
                 mt="1rem"
               >
                 • Frontend: ReactJS, NextJS, TypeScript, Redux & RTK Query,
@@ -124,7 +124,7 @@ function TabAbout() {
                 color="primary"
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
-                fontSize={{ base: "md", xl: "lg", "2xl": "2xl" }}
+                fontSize={{ base: "md", xl: "md", "2xl": "2xl" }}
                 mt="1rem"
               >
                 • Backend: NodeJS, Express, Mongoose, Jest, Prisma, y otros.
@@ -134,7 +134,7 @@ function TabAbout() {
                 color="primary"
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
-                fontSize={{ base: "md", xl: "lg", "2xl": "2xl" }}
+                fontSize={{ base: "md", xl: "md", "2xl": "2xl" }}
                 mt="1rem"
               >
                 • Databases: MongoDB, MySQL, PostgreSQL.
@@ -144,7 +144,7 @@ function TabAbout() {
                 color="primary"
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
-                fontSize={{ base: "md", xl: "lg", "2xl": "2xl" }}
+                fontSize={{ base: "md", xl: "md", "2xl": "2xl" }}
                 mt="1rem"
               >
                 • Other technologies: Git, GitHub, Trello, Postman, Jira.
