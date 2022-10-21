@@ -24,7 +24,7 @@ function TabAbout() {
   return (
     <>
       <Flex justifyContent="center">
-        <Tabs maxW="500px" size="lg">
+        <Tabs w={{base: "100vw", sm: "450px"}} size="lg" h="75vh">
           <TabList fontFamily={theme.fonts.secondary} justifyContent="space-evenly">
             <Tab
               p="0"
@@ -101,7 +101,7 @@ function TabAbout() {
                 color="primary"
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
-                fontSize={{ base: "lg", "2xl": "2xl" }}
+                fontSize={{ base: "md", xl: "lg", "2xl": "2xl" }}
                 mt="1rem"
               >
                 {locale === "en-US"
@@ -113,7 +113,7 @@ function TabAbout() {
                 color="primary"
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
-                fontSize={{ base: "lg", "2xl": "2xl" }}
+                fontSize={{ base: "md", xl: "lg", "2xl": "2xl" }}
                 mt="1rem"
               >
                 • Frontend: ReactJS, NextJS, TypeScript, Redux & RTK Query,
@@ -124,7 +124,7 @@ function TabAbout() {
                 color="primary"
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
-                fontSize={{ base: "lg", "2xl": "2xl" }}
+                fontSize={{ base: "md", xl: "lg", "2xl": "2xl" }}
                 mt="1rem"
               >
                 • Backend: NodeJS, Express, Mongoose, Jest, Prisma, y otros.
@@ -134,7 +134,7 @@ function TabAbout() {
                 color="primary"
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
-                fontSize={{ base: "lg", "2xl": "2xl" }}
+                fontSize={{ base: "md", xl: "lg", "2xl": "2xl" }}
                 mt="1rem"
               >
                 • Databases: MongoDB, MySQL, PostgreSQL.
@@ -144,7 +144,7 @@ function TabAbout() {
                 color="primary"
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
-                fontSize={{ base: "lg", "2xl": "2xl" }}
+                fontSize={{ base: "md", xl: "lg", "2xl": "2xl" }}
                 mt="1rem"
               >
                 • Other technologies: Git, GitHub, Trello, Postman, Jira.

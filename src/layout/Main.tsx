@@ -15,7 +15,7 @@ const Main = () => {
   return (
     <>
       <Flex
-        h="100vh"
+        minH="100vh"
         w={{ base: "100vw", sm: "auto" }}
         position="relative"
         zIndex="5"

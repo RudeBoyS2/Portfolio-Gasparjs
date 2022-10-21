@@ -45,3 +45,9 @@
         margin-right: 70px;
     }
 }
+
+@media screen and (max-width: 500px) {
+    #tsparticles {
+        display: none;
+    }
+}

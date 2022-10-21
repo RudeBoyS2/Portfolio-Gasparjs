@@ -17,21 +17,17 @@ function About() {
         height="100vh"
         position="relative"
         zIndex="5"
-        justifyContent="center"
         gap={{ base: "2rem", lg: "6", xl: "2rem" }}
         alignContent="center"
         bg="secondary"
         id="about"
-        // mt="8"
-        // width="inherit"
       >
         <Text
           fontSize={{ base: "4xl", lg: "3xl", "2xl": "7xl" }}
           fontFamily={theme.fonts.secondary}
           textAlign="center"
+          mt="10"
           mb={{ "2xl": "20" }}
-          py={{ base: 0, lg: "3rem", xl: 0 }}
-          h="50px"
         >
           {locale === "en-US"
             ? english.about.heading.first
@@ -44,6 +40,7 @@ function About() {
           gap="2rem"
           width={{ "2xl": "75vw" }}
           mb={{ "2xl": "32" }}
+          h={{ lg: "75vh" }}
         >
           <TabAbout />
           <Flex
