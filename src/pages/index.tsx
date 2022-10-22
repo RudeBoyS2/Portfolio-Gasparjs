@@ -22,7 +22,6 @@ const Home: NextPage = () => {
         <meta name="Gasparjs" content="Portfolio Web" />
         <meta name="description" content="Portfolio Web de Gaspar Escobar Fullstack Developer creado con Nextjs y ChakraUI" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preload" as="font" />
       </Head>
 
       <Flex w="fit-content">

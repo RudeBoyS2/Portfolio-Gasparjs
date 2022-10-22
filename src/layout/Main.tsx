@@ -1,8 +1,4 @@
-import {
-  Flex,
-  Text,
-  useTheme,
-} from "@chakra-ui/react";
+import { Flex, Text, useTheme } from "@chakra-ui/react";
 import Button from "../components/Button";
 import TechsIcon from "../components/TechsIcon";
 import { Link } from "react-scroll";
@@ -107,6 +103,7 @@ const Main = () => {
             </Flex>
           </Flex>
           <ChakraNextImage
+          priority="yes"
             alignSelf="center"
             alt="Gaspar Escobar"
             src="/assets/programmer.png"
@@ -148,10 +145,8 @@ const Main = () => {
           w="100%"
           mt="10"
           justifyContent="space-around"
-          // mb={{ base: "3rem", lg: "6rem", xl: "3rem", "2xl": "auto" }}
           flexDir="column"
           gap="2rem"
-          // mt={{ base: "auto", lg: "10", xl: "auto", "2xl": "auto" }}
           p="1rem"
         >
           <Flex
@@ -159,43 +154,23 @@ const Main = () => {
             gap={{ base: "1rem", md: "3rem" }}
             flexWrap="wrap"
           >
+            <TechsIcon src="/assets/html.png" alt="html logo" width="30px" />
+            <TechsIcon src="/assets/css.png" alt="css logo" width="30px" />
             <TechsIcon
-              src='/assets/html.png'
-              alt="html logo"
-              width="30px"
-            />
-            <TechsIcon
-              src='/assets/css.png'
-              alt="css logo"
-              width="30px"
-            />
-            <TechsIcon
-              src='/assets/js.png'
+              src="/assets/js.png"
               alt="javascript logo"
               width="30px"
             />
             <TechsIcon
-              src='/assets/ts.png'
+              src="/assets/ts.png"
               alt="typescript logo"
               width="30px"
             />
+            <TechsIcon src="/assets/react.png" alt="react logo" width="35px" />
+            <TechsIcon src="/assets/next.png" alt="next logo" width="49px" />
+            <TechsIcon src="/assets/redux.png" alt="redux logo" width="32px" />
             <TechsIcon
-              src='/assets/react.png'
-              alt="react logo"
-              width="35px"
-            />
-            <TechsIcon
-              src='/assets/next.png'
-              alt="next logo"
-              width="49px"
-            />
-            <TechsIcon
-              src='/assets/redux.png'
-              alt="redux logo"
-              width="32px"
-            />
-            <TechsIcon
-              src='/assets/chakra.png'
+              src="/assets/chakra.png"
               alt="chakra logo"
               width="none"
             />
@@ -206,33 +181,21 @@ const Main = () => {
             gap={{ base: "2rem", "2xl": "4rem" }}
             flexWrap="wrap"
           >
+            <TechsIcon src="/assets/node.png" alt="node logo" width="49px" />
             <TechsIcon
-              src='/assets/node.png'
-              alt="node logo"
-              width="49px"
-            />
-            <TechsIcon
-              src='/assets/express.png'
+              src="/assets/express.png"
               alt="express logo"
               width="99px"
             />
+            <TechsIcon src="/assets/mongo.png" alt="mongo logo" width="111px" />
+            <TechsIcon src="/assets/mysql.png" alt="mysql logo" width="58px" />
             <TechsIcon
-              src='/assets/mongo.png'
-              alt="mongo logo"
-              width="111px"
-            />
-            <TechsIcon
-              src='/assets/mysql.png'
-              alt="mysql logo"
-              width="58px"
-            />
-            <TechsIcon
-              src='/assets/mongoose1.png'
+              src="/assets/mongoose1.png"
               alt="mongoose logo"
               width="80px"
             />
             <TechsIcon
-              src='/assets/prisma.png'
+              src="/assets/prisma.png"
               alt="prisma logo"
               width="97px"
             />
