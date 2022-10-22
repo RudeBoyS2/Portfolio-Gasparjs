@@ -159,42 +159,42 @@ const Main = () => {
             flexWrap="wrap"
           >
             <TechsIcon
-              src="https://res.cloudinary.com/diylksocz/image/upload/v1663856274/html_hjlzsl.png"
+              src='/assets/html.png'
               alt="html logo"
               width="30px"
             />
             <TechsIcon
-              src="https://res.cloudinary.com/diylksocz/image/upload/v1663856738/CSS-Logo_nugbhg.png"
+              src='/assets/css.png'
               alt="css logo"
               width="30px"
             />
             <TechsIcon
-              src="https://res.cloudinary.com/diylksocz/image/upload/v1663856817/JavaScript-logo_sxiss8.png"
+              src='/assets/js.png'
               alt="javascript logo"
               width="30px"
             />
             <TechsIcon
-              src="https://res.cloudinary.com/diylksocz/image/upload/v1663858300/Typescript_logo_2020.svg_hobvh4.png"
+              src='/assets/ts.png'
               alt="typescript logo"
               width="30px"
             />
             <TechsIcon
-              src="https://res.cloudinary.com/diylksocz/image/upload/v1663856844/1200px-React.svg_aewkox.png"
+              src='/assets/react.png'
               alt="react logo"
               width="35px"
             />
             <TechsIcon
-              src="https://res.cloudinary.com/dxgrn0qtx/image/upload/v1665958088/next-js-logo-7929BCD36F-seeklogo.com_kvvs7h.png"
+              src='/assets/next.png'
               alt="next logo"
               width="49px"
             />
             <TechsIcon
-              src="https://res.cloudinary.com/diylksocz/image/upload/v1663856892/5848309bcef1014c0b5e4a9a_fbvhg7.png"
+              src='/assets/redux.png'
               alt="redux logo"
               width="32px"
             />
             <TechsIcon
-              src="https://res.cloudinary.com/diylksocz/image/upload/v1663857068/rzylUjaf_400x400-removebg-preview_r2o3jt.png"
+              src='/assets/chakra.png'
               alt="chakra logo"
               width="none"
             />
@@ -206,32 +206,32 @@ const Main = () => {
             flexWrap="wrap"
           >
             <TechsIcon
-              src="https://res.cloudinary.com/diylksocz/image/upload/v1663857396/1200px-Node.js_logo.svg_ep0yw5.png"
+              src='/assets/node.png'
               alt="node logo"
               width="49px"
             />
             <TechsIcon
-              src="https://res.cloudinary.com/diylksocz/image/upload/v1663857488/Expressjs_zhwchj.png"
+              src='/assets/express.png'
               alt="express logo"
               width="99px"
             />
             <TechsIcon
-              src="https://res.cloudinary.com/diylksocz/image/upload/v1663857517/MongoDB_Logo.svg_bqal2y.png"
+              src='/assets/mongo.png'
               alt="mongo logo"
               width="111px"
             />
             <TechsIcon
-              src="https://res.cloudinary.com/diylksocz/image/upload/v1663857594/MySQL-logo_jz68gg.png"
+              src='/assets/mysql.png'
               alt="mysql logo"
               width="58px"
             />
             <TechsIcon
-              src="https://res.cloudinary.com/dxgrn0qtx/image/upload/v1666214283/mongoose_xlcp0j.png"
+              src='/assets/mongoose1.png'
               alt="mongoose logo"
               width="80px"
             />
             <TechsIcon
-              src="https://res.cloudinary.com/dxgrn0qtx/image/upload/v1665958286/logo-dark_zpoxu3.png"
+              src='/assets/prisma.png'
               alt="prisma logo"
               width="97px"
             />
