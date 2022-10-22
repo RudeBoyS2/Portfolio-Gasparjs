@@ -12,8 +12,8 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    primary: "Arimo",
-    secondary: "Poppins",
+    primary: "Arimo, sans-serif",
+    secondary: "Poppins, sans-serif",
   },
   colors: {
     primary: "#141516",

@@ -18,13 +18,13 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Projects</title>
-        <meta name="Gasparjs" content="Web-Projects" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>GasparJS</title>
+        <meta name="Gasparjs" content="Portfolio Web" />
+        <meta name="description" content="Portfolio Web de Gaspar Escobar Fullstack Developer creado con Nextjs y ChakraUI" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preload" as="font" />
       </Head>
 
-      {/* <Flex w={{base: "fit-content", sm: "100%"}}> */}
       <Flex w="fit-content">
         <Flex w={{lg: "25vw"}}>
         <Sidebar />
@@ -39,6 +39,9 @@ const Home: NextPage = () => {
         >
           {locale === "en-US" ? (
           <Button
+          display="flex"
+          gap="1"
+          justifyContent="center"
             position="fixed"
             zIndex="150"
             right="0"
@@ -48,15 +51,18 @@ const Home: NextPage = () => {
             _active={{ border: "none" }}
             aria-label="switch language button"
             color="secondary"
-            fontSize="xl"
+            fontSize={{base: "sm", lg: "lg", xl: "xl"}}
             onClick={() => {
               router.push("/", "/", { locale: "es-AR" });
             }}
-          >
+          > 
+            <p>EN</p>
             <Flag country="US" size={25} />
           </Button>
         ) : (
           <Button
+          display="flex"
+          gap="1"
             position="fixed"
             zIndex="150"
             right="0"
@@ -66,11 +72,12 @@ const Home: NextPage = () => {
             _active={{ border: "none" }}
             aria-label="switch language button"
             color="secondary"
-            fontSize="xl"
+            fontSize={{base: "sm", lg: "lg", xl: "xl"}}
             onClick={() => {
               router.push("/", "/", { locale: "en-US" });
             }}
           >
+            <p>ES</p>
             <Flag country="AR" size={25} />
           </Button>
         )}

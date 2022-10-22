@@ -180,8 +180,8 @@ function Contact() {
                 : spanish.contact.heading.second}
             </Text>
             <form onSubmit={handleSubmit} id="contact_form">
-              <FormControl>
-                <FormLabel fontSize={{ base: "lg", "2xl": "2xl" }} mt="2">
+              <FormControl id="name">
+                <FormLabel  fontSize={{ base: "lg", "2xl": "2xl" }} mt="2">
                   {locale === "en-US"
                     ? english.contact.input.first
                     : spanish.contact.input.first}
@@ -192,7 +192,7 @@ function Contact() {
                   size={{ base: "md", "2xl": "md" }}
                 />
               </FormControl>
-              <FormControl>
+              <FormControl id="email">
                 <FormLabel fontSize={{ base: "lg", "2xl": "2xl" }} mt="2">
                   {locale === "en-US"
                     ? english.contact.input.second
@@ -204,7 +204,7 @@ function Contact() {
                   size={{ base: "md", "2xl": "md" }}
                 />
               </FormControl>
-              <FormControl>
+              <FormControl id="message">
                 <FormLabel fontSize={{ base: "lg", "2xl": "2xl" }} mt="2">
                   {locale === "en-US"
                     ? english.contact.input.third

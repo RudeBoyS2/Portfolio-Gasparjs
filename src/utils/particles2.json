@@ -44,7 +44,7 @@
       },
       "value": {
         "min": 0.1,
-        "max": 0.5
+        "max": 0.3
       },
       "animation": {
         "count": 0,

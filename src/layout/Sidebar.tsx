@@ -89,11 +89,15 @@ const Sidebar = () => {
           height="100vh"
         >
           <Grid h="20vh" justifyContent="center" alignContent="center">
-            <Flex w="100%" p={{base: "2.2rem", md: "2.4rem", lg: "1.5rem", xl: "2.4rem"}} justifyContent="space-between">
+            <Flex
+              w="100%"
+              p={{ base: "2.2rem", md: "2.4rem", lg: "1.5rem", xl: "2.4rem" }}
+              justifyContent="space-between"
+            >
               <ChakraNextImage
-                src="https://res.cloudinary.com/dxgrn0qtx/image/upload/q_100/v1666072754/asdasd_lbeb9t.jpg"
-                w={{ base: "120px", "2xl": "150px" }}
-                h={{ base: "70px", "2xl": "150px" }}
+                src="/assets/profile.jpg"
+                w="120px"
+                h="70px"
                 rounded="5px"
                 alt="my photo"
               />
@@ -226,11 +230,16 @@ const Sidebar = () => {
         display={{ base: "none", lg: "flex" }}
       >
         <Grid h="20vh" w="100%" justifyContent="center" alignContent="center">
-          <Flex w="100%" gap={2} p={{lg: "2rem", xl: "2.4rem"}} justifyContent="space-between">
+          <Flex
+            w="100%"
+            gap={2}
+            p={{ lg: "2rem", xl: "2.4rem" }}
+            justifyContent="space-between"
+          >
             <ChakraNextImage
               src="https://res.cloudinary.com/dxgrn0qtx/image/upload/q_100/v1666072754/asdasd_lbeb9t.jpg"
-              w={{ base: "120px", "2xl": "170px" }}
-              h={{ base: "70px", "2xl": "130px" }}
+              w="120px"
+              h="70px"
               rounded="5px"
               alt="my photo"
             />

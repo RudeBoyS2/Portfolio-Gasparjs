@@ -51,7 +51,7 @@ function About() {
             display={{ base: "none", xl: "block" }}
             w={{ base: "334px", "2xl": "550px" }}
             h={{ base: "236px", "2xl": "550px" }}
-            src="https://res.cloudinary.com/diylksocz/image/upload/v1663859544/undraw_programming_re_kg9v_m1tcvj.svg"
+            src="/assets/programmer2.png"
           />
         </Flex>
       </Flex>

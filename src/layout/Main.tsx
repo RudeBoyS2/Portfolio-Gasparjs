@@ -76,6 +76,7 @@ const Main = () => {
             <Flex
               justify="center"
               align="baseline"
+              fontFamily="primary"
               fontSize={{
                 base: "34px",
                 sm: "4xl",
@@ -108,7 +109,7 @@ const Main = () => {
           <ChakraNextImage
             alignSelf="center"
             alt="Gaspar Escobar"
-            src="https://res.cloudinary.com/dxgrn0qtx/image/upload/v1666311482/aaa_saoxjf.png"
+            src="/assets/programmer.png"
             fit="cover"
             h={{ base: "300px", sm: "350px" }}
             w={{ base: "300px", sm: "350px", "2xl": "600px" }}
