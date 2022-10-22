@@ -1,5 +1,5 @@
-import { Image } from "@chakra-ui/react";
 import React from "react";
+import ChakraNextImage from "./ChakraNextImage";
 
 type Props = {
   src: string;
@@ -10,12 +10,11 @@ type Props = {
 function TechsIcon({ src, alt, width }: Props) {
   return (
     <>
-      <Image
+      <ChakraNextImage
         src={src}
-        minW="30px"
+        minW={{ base: "30px", "2xl": "75px" }}
         w={width}
-        height={["30px", "30px", "30px", "30px", "30px", "50px"]}
-        fit="cover"
+        height={{ base: "30px", "2xl": "55px" }}
         transition="all .1s ease"
         _hover={{ transform: "scale(1.1)" }}
         alt={alt}

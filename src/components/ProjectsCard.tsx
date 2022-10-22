@@ -131,7 +131,7 @@ function ProjectsCard({
               textAlign="center"
               fontFamily={theme.fonts.primary}
               color="#505050"
-              fontSize="xl"
+              fontSize="lg"
             >
               {briefDescription}
             </Text>

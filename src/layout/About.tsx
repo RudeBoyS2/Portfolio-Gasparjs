@@ -1,9 +1,10 @@
-import { Flex, Grid, Image, Text, useTheme } from "@chakra-ui/react";
+import { Flex, Image, Text, useTheme } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
 import TabAbout from "../components/TabAbout";
 import english from "../translations/en/en.json";
 import spanish from "../translations/es/es.json";
+import ChakraNextImage from "../components/ChakraNextImage";
 
 function About() {
   const { locale } = useRouter();
@@ -15,6 +16,7 @@ function About() {
         flexDir="column"
         width="100%"
         minH="100vh"
+        maxH={{ "2xl": "100vh" }}
         position="relative"
         zIndex="5"
         gap={{ base: "2rem", lg: "6", xl: "2rem" }}
@@ -38,25 +40,19 @@ function About() {
           alignSelf="center"
           flexDir={{ base: "column", xl: "row" }}
           justifyContent="space-around"
-          gap="2rem"
+          gap="5rem"
           width={{ "2xl": "75vw" }}
           mb={{ "2xl": "32" }}
           h={{ lg: "75vh" }}
         >
           <TabAbout />
-          <Flex
-            display={{ base: "none", xl: "block" }}
-            justifyContent="center"
-            alignContent="center"
+          <ChakraNextImage
             alignSelf="center"
-          >
-            <Image
-              src="https://res.cloudinary.com/diylksocz/image/upload/v1663859544/undraw_programming_re_kg9v_m1tcvj.svg"
-              maxW={{ base: "334px", "2xl": "550px" }}
-              maxH={{ base: "236px", "2xl": "550px" }}
-              alt="programmer"
-            />
-          </Flex>
+            display={{ base: "none", xl: "block" }}
+            w={{ base: "334px", "2xl": "550px" }}
+            h={{ base: "236px", "2xl": "550px" }}
+            src="https://res.cloudinary.com/diylksocz/image/upload/v1663859544/undraw_programming_re_kg9v_m1tcvj.svg"
+          />
         </Flex>
       </Flex>
     </>

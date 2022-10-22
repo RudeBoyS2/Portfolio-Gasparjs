@@ -3,13 +3,13 @@ import {
   Grid,
   Box,
   Flex,
-  Image,
   Text,
   useTheme,
   Icon,
   Link,
   useDisclosure,
   Button,
+  Divider,
 } from "@chakra-ui/react";
 import { IoHome } from "react-icons/io5";
 import {
@@ -26,7 +26,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import english from "../translations/en/en.json";
 import spanish from "../translations/es/es.json";
-import NextLink from "next/link";
+import ChakraNextImage from "../components/ChakraNextImage";
 
 const Sidebar = () => {
   const { locale } = useRouter();
@@ -34,6 +34,14 @@ const Sidebar = () => {
   const [hidden, setHidden] = useState(!isOpen);
   const [nav, setNav] = useState();
   const theme = useTheme();
+  const firstNavName =
+    locale === "en-US" ? english.sidebar.first : spanish.sidebar.first;
+  const secondNavName =
+    locale === "en-US" ? english.sidebar.second : spanish.sidebar.second;
+  const thirdNavName =
+    locale === "en-US" ? english.sidebar.third : spanish.sidebar.third;
+  const fourthNavName =
+    locale === "en-US" ? english.sidebar.fourth : spanish.sidebar.fourth;
 
   return (
     <>
@@ -42,7 +50,6 @@ const Sidebar = () => {
         <Button
           {...getButtonProps()}
           px="3"
-          mt="1"
           bg="none"
           _hover={{ bg: "none" }}
           _active={{ border: "none" }}
@@ -54,32 +61,15 @@ const Sidebar = () => {
         >
           {!isOpen ? (
             <HamburgerIcon
-              w={{ base: "30px", sm: "20px" }}
-              h={{ base: "30px", sm: "20px" }}
+              w={{ base: "22px", sm: "20px" }}
+              h={{ base: "22px", sm: "20px" }}
             />
           ) : (
             <CloseIcon
-              w={{ base: "30px", sm: "20px" }}
-              h={{ base: "30px", sm: "20px" }}
+              w={{ base: "22px", sm: "20px" }}
+              h={{ base: "22px", sm: "20px" }}
             />
           )}
-        </Button>
-        <Button
-          position="absolute"
-          right="0"
-          bg="none"
-          _hover={{ bg: "none" }}
-          _active={{ border: "none" }}
-          aria-label="switch language button"
-          color="secondary"
-          fontSize="xl"
-        >
-          <NextLink
-            href={locale === "en-US" ? "/" : "/en-US"}
-            locale={locale === "en-US" ? "es-AR" : "en-US"}
-          >
-            {locale === "en-US" ? "EN" : "ES"}
-          </NextLink>
         </Button>
         <Flex
           as={motion.div}
@@ -89,7 +79,7 @@ const Sidebar = () => {
           onAnimationStart={() => setHidden(false)}
           onAnimationComplete={() => setHidden(!isOpen)}
           animate={{ width: isOpen ? 300 : 0 }}
-          display={{lg: "none"}}
+          display={{ lg: "none" }}
           flexDirection="column"
           bg="primary"
           overflow="hidden"
@@ -99,20 +89,14 @@ const Sidebar = () => {
           height="100vh"
         >
           <Grid h="20vh" justifyContent="center" alignContent="center">
-            <Flex w="100%" p="3rem" justifyContent="space-between">
-              <Box
-                w={{ base: "70px", "2xl": "150px" }}
+            <Flex w="100%" p={{base: "2.2rem", md: "2.4rem", lg: "1.5rem", xl: "2.4rem"}} justifyContent="space-between">
+              <ChakraNextImage
+                src="https://res.cloudinary.com/dxgrn0qtx/image/upload/q_100/v1666072754/asdasd_lbeb9t.jpg"
+                w={{ base: "120px", "2xl": "150px" }}
                 h={{ base: "70px", "2xl": "150px" }}
-              >
-                <Image
-                  src="https://res.cloudinary.com/dxgrn0qtx/image/upload/q_100/v1666072754/asdasd_lbeb9t.jpg"
-                  w="100%"
-                  h="100%"
-                  rounded="5px"
-                  fit="cover"
-                  alt="my photo"
-                />
-              </Box>
+                rounded="5px"
+                alt="my photo"
+              />
               <Flex w="100%" ml="4" flexDir="column" justify="center">
                 <Text
                   color="#dedede"
@@ -142,47 +126,32 @@ const Sidebar = () => {
               </Flex>
             </Flex>
           </Grid>
+          <Divider borderColor="gray" opacity="0.1" />
           <Grid>
             <NavItem
               icon={IoHome}
-              name={
-                locale === "en-US"
-                  ? english.sidebar.first
-                  : spanish.sidebar.first
-              }
+              name={firstNavName}
               path="/"
               setNav={setNav}
               nav={nav}
             />
             <NavItem
               icon={FaUserAlt}
-              name={
-                locale === "en-US"
-                  ? english.sidebar.second
-                  : spanish.sidebar.second
-              }
+              name={secondNavName}
               path="about"
               setNav={setNav}
               nav={nav}
             />
             <NavItem
               icon={BsFillBriefcaseFill}
-              name={
-                locale === "en-US"
-                  ? english.sidebar.third
-                  : spanish.sidebar.third
-              }
+              name={thirdNavName}
               path="Projects"
               setNav={setNav}
               nav={nav}
             />
             <NavItem
               icon={AiFillMail}
-              name={
-                locale === "en-US"
-                  ? english.sidebar.fourth
-                  : spanish.sidebar.fourth
-              }
+              name={fourthNavName}
               path="contact"
               setNav={setNav}
               nav={nav}
@@ -198,7 +167,6 @@ const Sidebar = () => {
             left="0"
             bottom="0"
             right="0"
-
           >
             <Flex gap="3rem">
               <Link
@@ -257,38 +225,16 @@ const Sidebar = () => {
         zIndex="10"
         display={{ base: "none", lg: "flex" }}
       >
-        <Button
-          position="absolute"
-          right="0"
-          bg="none"
-          _hover={{ bg: "none" }}
-          _active={{ border: "none" }}
-          aria-label="switch language button"
-          color="secondary"
-          fontSize="xl"
-        >
-          <NextLink
-            href={locale === "en-US" ? "/" : "/en-US"}
-            locale={locale === "en-US" ? "es-AR" : "en-US"}
-          >
-            {locale === "en-US" ? "EN" : "ES"}
-          </NextLink>
-        </Button>
         <Grid h="20vh" w="100%" justifyContent="center" alignContent="center">
-          <Flex w="100%" p="3rem" justifyContent="space-between">
-            <Box
-              w={{ base: "70px", "2xl": "150px" }}
-              h={{ base: "70px", "2xl": "150px" }}
-            >
-              <Image
-                src="https://res.cloudinary.com/dxgrn0qtx/image/upload/q_100/v1666072754/asdasd_lbeb9t.jpg"
-                w="100%"
-                h="100%"
-                rounded="5px"
-                fit="cover"
-                alt="my photo"
-              />
-            </Box>
+          <Flex w="100%" gap={2} p={{lg: "2rem", xl: "2.4rem"}} justifyContent="space-between">
+            <ChakraNextImage
+              src="https://res.cloudinary.com/dxgrn0qtx/image/upload/q_100/v1666072754/asdasd_lbeb9t.jpg"
+              w={{ base: "120px", "2xl": "170px" }}
+              h={{ base: "70px", "2xl": "130px" }}
+              rounded="5px"
+              alt="my photo"
+            />
+
             <Flex
               w="100%"
               ml={{ base: "4", "2xl": "8" }}
@@ -320,31 +266,32 @@ const Sidebar = () => {
             </Flex>
           </Flex>
         </Grid>
+        <Divider borderColor="gray" opacity="0.1" />
         <Grid>
           <NavItem
             icon={IoHome}
-            name="Inicio"
+            name={firstNavName}
             path="/"
             setNav={setNav}
             nav={nav}
           />
           <NavItem
             icon={FaUserAlt}
-            name="Sobre mi"
+            name={secondNavName}
             path="about"
             setNav={setNav}
             nav={nav}
           />
           <NavItem
             icon={BsFillBriefcaseFill}
-            name="Proyectos"
+            name={thirdNavName}
             path="Projects"
             setNav={setNav}
             nav={nav}
           />
           <NavItem
             icon={AiFillMail}
-            name="Contacto"
+            name={fourthNavName}
             path="contact"
             setNav={setNav}
             nav={nav}
@@ -374,7 +321,7 @@ const Sidebar = () => {
                 transition="all .1s ease"
               />
             </Link>
-            <Link href="https://walink.co/15a3f4" isExternal={true}>
+            <Link href="https://wa.me/543794397311" isExternal={true}>
               <Icon
                 as={AiOutlineWhatsApp}
                 fill="#737272"
