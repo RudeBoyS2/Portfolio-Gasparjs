@@ -1,3 +1,20 @@
+# Portfolio Web by GasparJS
+
+Landing page made with NextJS, Typescript and ChakraUI. This page was made to show my information, projects and skills.
+https://www.gasparjs.vercel.app/
+
+## What does the app includes?
+- Landing page with my personal information and the projects i been working on as a Front-end/Fullstack Developer.
+- 2 Languages (Spanish and English).
+
+## Build with
+This project was made with NextJS, Typescript and ChakraUI, using the next libraries:
+
+- Framer-motion (animations).
+- EmailJS.
+- react-multi-carousel.
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
