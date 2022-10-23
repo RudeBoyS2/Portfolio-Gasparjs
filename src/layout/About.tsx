@@ -1,14 +1,21 @@
-import { Flex, Image, Text, useTheme } from "@chakra-ui/react";
+import { Flex, Text, useTheme } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
 import TabAbout from "../components/TabAbout";
 import english from "../translations/en/en.json";
 import spanish from "../translations/es/es.json";
 import ChakraNextImage from "../components/ChakraNextImage";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import {
+  firstHeading,
+  secondHeading,
+} from "../utils/animationsVariants";
 
 function About() {
   const { locale } = useRouter();
   const theme = useTheme();
+  const { ref, inView } = useInView({ triggerOnce: true, delay: 200 });
 
   return (
     <>
@@ -26,6 +33,10 @@ function About() {
         id="about"
       >
         <Text
+          animate={inView ? "visible" : ""}
+          as={motion.h3}
+          initial="hidden"
+          variants={firstHeading}
           fontSize={{ base: "4xl", lg: "3xl", "2xl": "7xl" }}
           fontFamily={theme.fonts.secondary}
           textAlign="center"
@@ -44,6 +55,11 @@ function About() {
           width={{ "2xl": "75vw" }}
           mb={{ "2xl": "32" }}
           h={{ lg: "75vh" }}
+          animate={inView ? "visible" : ""}
+          as={motion.div}
+          initial="hidden"
+          ref={ref}
+          variants={secondHeading}
         >
           <TabAbout />
           <ChakraNextImage

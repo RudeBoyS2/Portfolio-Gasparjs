@@ -34,7 +34,7 @@ const Home: NextPage = () => {
           justifyContent="center"
           alignContent="center"
           flexDir="column"
-          position="relative"
+          position="relative"        
         >
           {locale === "en-US" ? (
           <Button
@@ -49,7 +49,6 @@ const Home: NextPage = () => {
             _hover={{ bg: "none" }}
             _active={{ border: "none" }}
             aria-label="switch language button"
-            color="secondary"
             fontSize={{base: "sm", lg: "lg", xl: "xl"}}
             onClick={() => {
               router.push("/", "/", { locale: "es-AR" });
@@ -70,7 +69,7 @@ const Home: NextPage = () => {
             _hover={{ bg: "none" }}
             _active={{ border: "none" }}
             aria-label="switch language button"
-            color="secondary"
+            color="#141516"
             fontSize={{base: "sm", lg: "lg", xl: "xl"}}
             onClick={() => {
               router.push("/", "/", { locale: "en-US" });

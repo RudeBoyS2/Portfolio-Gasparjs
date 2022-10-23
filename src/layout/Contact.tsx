@@ -18,10 +18,14 @@ import emailjs from "@emailjs/browser";
 import { useRouter } from "next/router";
 import english from "../translations/en/en.json";
 import spanish from "../translations/es/es.json";
+import {useInView} from "react-intersection-observer";
+import { motion } from "framer-motion";
+import { firstHeading, secondHeading } from "../utils/animationsVariants";
 
 function Contact() {
   const { locale } = useRouter();
   const [button, setButton] = useState(false);
+  const {ref, inView} = useInView({triggerOnce: true, delay: 200});  
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -82,6 +86,11 @@ function Contact() {
             justifyContent="center"
             maxH="auto"
             bg="#fff"
+            animate={inView ? "visible" : ""}
+            as={motion.div}
+            initial="hidden"
+            ref={ref}
+            variants={firstHeading}
           >
             <Text
               alignSelf="center"
@@ -162,6 +171,10 @@ function Contact() {
             rounded="20px"
             boxShadow="1px 1px 10px 1px #606060"
             bg="#fff"
+            animate={inView ? "visible" : ""}
+            as={motion.div}
+            initial="hidden"
+            variants={secondHeading}
           >
             <Text
               fontSize={{

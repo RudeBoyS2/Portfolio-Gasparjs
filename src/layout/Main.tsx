@@ -7,10 +7,14 @@ import { useRouter } from "next/router";
 import english from "../translations/en/en.json";
 import spanish from "../translations/es/es.json";
 import ChakraNextImage from "../components/ChakraNextImage";
+import {useInView} from "react-intersection-observer";
+import { motion } from "framer-motion";
+import { firstHeading, secondHeading, thirdHeading } from "../utils/animationsVariants";
 
 const Main = () => {
   const { locale } = useRouter();
   const theme = useTheme();
+  const {ref, inView} = useInView({triggerOnce: true, delay: 200});  
 
   return (
     <>
@@ -37,6 +41,10 @@ const Main = () => {
         >
           <Flex flexDir="column" alignSelf="center" minW="50%" ml={{ lg: "6" }}>
             <Text
+              animate={inView ? "visible" : ""}
+              as={motion.h3}
+              initial="hidden"
+              variants={firstHeading}
               fontSize={{
                 base: "34px",
                 sm: "4xl",
@@ -55,6 +63,11 @@ const Main = () => {
                 : spanish.main.heading.first}
             </Text>
             <Text
+            animate={inView ? "visible" : ""}
+            as={motion.h1}
+            initial="hidden"
+            ref={ref}
+            variants={secondHeading}
               fontSize={{
                 base: "44px",
                 sm: "5xl",
@@ -70,6 +83,10 @@ const Main = () => {
               Gaspar Escobar
             </Text>
             <Flex
+            animate={inView ? "visible" : ""}
+            as={motion.div}
+            initial="hidden"
+            variants={thirdHeading}
               justify="center"
               align="baseline"
               fontFamily="primary"
@@ -103,7 +120,7 @@ const Main = () => {
             </Flex>
           </Flex>
           <ChakraNextImage
-          priority="yes"
+            priority="yes"
             alignSelf="center"
             alt="Gaspar Escobar"
             src="/assets/programmer.png"
