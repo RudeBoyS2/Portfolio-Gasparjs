@@ -11,8 +11,7 @@ function Button({content}: any) {
         h="64px"
         justify="center"
         as={motion.button}
-        w={{base: "155px", sm: "180px", "2xl": "200px"}}
-        // h={{"2xl": "100px"}}
+        w={{base: "155px", sm: "180px", "2xl": "220px"}}
         drag="x"
         dragConstraints={{ left: -100, right: 100 }}
         whileHover={{ scale: 1.1 }}

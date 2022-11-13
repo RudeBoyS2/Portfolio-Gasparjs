@@ -12,9 +12,10 @@ function TechsIcon({ src, alt, width }: Props) {
     <>
       <ChakraNextImage
         src={src}
-        minW={{ base: "30px", "2xl": "75px" }}
+        minW={{ base: "30px", "2xl": "35px" }}
         w={width}
-        height={{ base: "30px", "2xl": "55px" }}
+        // maxW={width}
+        height={{ base: "30px", "2xl": "35px" }}
         transition="all .1s ease"
         _hover={{ transform: "scale(1.1)" }}
         alt={alt}

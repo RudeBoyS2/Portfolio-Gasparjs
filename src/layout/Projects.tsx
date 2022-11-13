@@ -53,13 +53,14 @@ function Projects() {
       >
         <Box p="2rem" mt={{ base: "0", sm: "0", "2xl": "28" }}>
           <Text
+            mb={{"2xl": "2rem"}}
             fontSize={{
               base: "4xl",
               sm: "4xl",
               md: "4xl",
               lg: "3xl",
               xl: "4xl",
-              "2xl": "7xl",
+              "2xl": "5xl",
             }}
             fontFamily={theme.fonts.secondary}
             textAlign="center"
@@ -75,7 +76,7 @@ function Projects() {
               md: "xl",
               lg: "lg",
               xl: "xl",
-              "2xl": "4xl",
+              "2xl": "2xl",
             }}
             fontFamily={theme.fonts.primary}
             color="#505050"
