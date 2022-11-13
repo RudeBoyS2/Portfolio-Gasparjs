@@ -125,8 +125,8 @@ const Main = () => {
             alt="Gaspar Escobar"
             src="/assets/programmer.png"
             fit="cover"
-            h={{ base: "300px", sm: "350px" }}
-            w={{ base: "300px", sm: "350px", "2xl": "600px" }}
+            h={{ base: "300px", sm: "350px", "2xl": "400px" }}
+            w={{ base: "300px", sm: "350px", "2xl": "400px" }}
             position="relative"
             display={{ base: "block", sm: "none", md: "block" }}
           />
@@ -214,7 +214,7 @@ const Main = () => {
             <TechsIcon
               src="/assets/prisma.png"
               alt="prisma logo"
-              width="97px"
+              width="107px"
             />
           </Flex>
         </Flex>

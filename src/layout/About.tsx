@@ -37,7 +37,7 @@ function About() {
           as={motion.h3}
           initial="hidden"
           variants={firstHeading}
-          fontSize={{ base: "4xl", lg: "3xl", "2xl": "7xl" }}
+          fontSize={{ base: "4xl", lg: "3xl", "2xl": "5xl" }}
           fontFamily={theme.fonts.secondary}
           textAlign="center"
           mt="10"
@@ -65,8 +65,8 @@ function About() {
           <ChakraNextImage
             alignSelf="center"
             display={{ base: "none", xl: "block" }}
-            w={{ base: "334px", "2xl": "550px" }}
-            h={{ base: "236px", "2xl": "550px" }}
+            w={{ base: "334px", "2xl": "380px" }}
+            h={{ base: "236px", "2xl": "380px" }}
             src="/assets/programmer2.png"
           />
         </Flex>

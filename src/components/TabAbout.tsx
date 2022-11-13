@@ -24,11 +24,11 @@ function TabAbout() {
   return (
     <>
       <Flex justifyContent="center">
-        <Tabs w={{base: "100vw", sm: "450px", "2xl": "650px"}} size="lg" minH={{base: "75vh", "2xl": "auto"}}>
-          <TabList fontFamily={theme.fonts.secondary} justifyContent="space-evenly">
+        <Tabs w={{base: "100vw", sm: "450px", "2xl": "550px"}} size="lg" minH={{base: "75vh", "2xl": "auto"}}>
+          <TabList fontFamily={theme.fonts.secondary} justifyContent="space-around">
             <Tab
               p="0"
-              fontSize={["lg", "lg", "lg", "md", "lg", "3xl"]}
+              fontSize={["lg", "lg", "lg", "md", "lg", "2xl"]}
               _selected={{ color: "tertiary" }}
               _active={{ bg: "none" }}
             >
@@ -38,7 +38,7 @@ function TabAbout() {
             </Tab>
             <Tab
             p="0"
-              fontSize={["lg", "lg", "lg", "md", "lg", "3xl"]}
+              fontSize={["lg", "lg", "lg", "md", "lg", "2xl"]}
               _selected={{ color: "tertiary" }}
               _active={{ bg: "none" }}
             >
@@ -48,7 +48,7 @@ function TabAbout() {
             </Tab>
             <Tab
             p="0"
-              fontSize={["lg", "lg", "lg", "md", "lg", "3xl"]}
+              fontSize={["lg", "lg", "lg", "md", "lg", "2xl"]}
               _selected={{ color: "tertiary" }}
               _active={{ bg: "none" }}
             >
@@ -75,8 +75,8 @@ function TabAbout() {
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
                 mt="1rem"
-                fontSize={{ base: "md", "2xl": "2xl" }}
-                lineHeight={{base: "2rem", xl: "2rem", "2xl": "2.2rem"}}
+                fontSize={{ base: "md", "2xl": "xl" }}
+                lineHeight={{base: "2rem", xl: "2rem", "2xl": "2.3rem"}}
               >
                 {locale === "en-US"
                 ? english.about.about.first
@@ -101,7 +101,7 @@ function TabAbout() {
                 color="primary"
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
-                fontSize={{ base: "md", xl: "md", "2xl": "2xl" }}
+                fontSize={{ base: "md", xl: "md", "2xl": "xl" }}
                 mt="1rem"
               >
                 {locale === "en-US"
@@ -113,7 +113,7 @@ function TabAbout() {
                 color="primary"
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
-                fontSize={{ base: "md", xl: "md", "2xl": "2xl" }}
+                fontSize={{ base: "md", xl: "md", "2xl": "xl" }}
                 mt="1rem"
               >
                 • Frontend: ReactJS, NextJS, TypeScript, Redux & RTK Query,
@@ -124,7 +124,7 @@ function TabAbout() {
                 color="primary"
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
-                fontSize={{ base: "md", xl: "md", "2xl": "2xl" }}
+                fontSize={{ base: "md", xl: "md", "2xl": "xl" }}
                 mt="1rem"
               >
                 • Backend: NodeJS, Express, Mongoose, Jest, Prisma, y otros.
@@ -134,7 +134,7 @@ function TabAbout() {
                 color="primary"
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
-                fontSize={{ base: "md", xl: "md", "2xl": "2xl" }}
+                fontSize={{ base: "md", xl: "md", "2xl": "xl" }}
                 mt="1rem"
               >
                 • Databases: MongoDB, MySQL, PostgreSQL.
@@ -144,7 +144,7 @@ function TabAbout() {
                 color="primary"
                 fontWeight="bold"
                 fontFamily={theme.fonts.primary}
-                fontSize={{ base: "md", xl: "md", "2xl": "2xl" }}
+                fontSize={{ base: "md", xl: "md", "2xl": "xl" }}
                 mt="1rem"
               >
                 • Other technologies: Git, GitHub, Trello, Postman, Jira.
@@ -155,7 +155,7 @@ function TabAbout() {
                 <UnorderedList spacing={3}>
                   <ListItem>
                     <Text
-                      fontSize={{ base: "lg", "2xl": "2xl" }}
+                      fontSize={{ base: "lg", "2xl": "xl" }}
                       color="primary"
                       fontWeight="bold"
                       mt="1rem"
@@ -163,7 +163,7 @@ function TabAbout() {
                       Job Ready
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontWeight="thin" fontSize={{"2xl": "xl"}}>
+                      <Text color="primary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
                         - Alkemy
                       </Text>
                       <a
@@ -180,7 +180,7 @@ function TabAbout() {
                   </ListItem>
                   <ListItem>
                     <Text
-                      fontSize={{ base: "lg", "2xl": "2xl" }}
+                      fontSize={{ base: "lg", "2xl": "xl" }}
                       color="primary"
                       fontWeight="bold"
                       mt="1rem"
@@ -188,7 +188,7 @@ function TabAbout() {
                       Front-end Engineer
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontWeight="thin" fontSize={{"2xl": "xl"}}>
+                      <Text color="primary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
                         - Codecademy
                       </Text>
                       <a
@@ -205,7 +205,7 @@ function TabAbout() {
                   </ListItem>
                   <ListItem>
                     <Text
-                      fontSize={{ base: "lg", "2xl": "2xl" }}
+                      fontSize={{ base: "lg", "2xl": "xl" }}
                       color="primary"
                       fontWeight="bold"
                       mt="1rem"
@@ -213,7 +213,7 @@ function TabAbout() {
                       EF SET English Certificate (C 2)
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontWeight="thin" fontSize={{"2xl": "xl"}}>
+                      <Text color="primary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
                         - EF SET
                       </Text>
                       <a
@@ -230,7 +230,7 @@ function TabAbout() {
                   </ListItem>
                   <ListItem>
                     <Text
-                      fontSize={{ base: "lg", "2xl": "2xl" }}
+                      fontSize={{ base: "lg", "2xl": "xl" }}
                       color="primary"
                       fontWeight="bold"
                       mt="1rem"
@@ -238,7 +238,7 @@ function TabAbout() {
                       Sé Programar
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontWeight="thin" fontSize={{"2xl": "xl"}}>
+                      <Text color="primary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
                         - Argentina Programa
                       </Text>
                       <a
@@ -255,14 +255,14 @@ function TabAbout() {
                   </ListItem>
                   <ListItem>
                     <Text
-                      fontSize={{ base: "lg", "2xl": "2xl" }}
+                      fontSize={{ base: "lg", "2xl": "xl" }}
                       color="primary"
                       fontWeight="bold"
                       mt="1rem"
                     >
                       Inglés Adolescente
                     </Text>
-                    <Text color="primary" fontWeight="thin" fontSize={{"2xl": "xl"}}>
+                    <Text color="primary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
                       - Josefina Contte (2012 - 2017)
                     </Text>
                   </ListItem>
