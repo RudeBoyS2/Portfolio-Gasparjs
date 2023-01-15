@@ -10,10 +10,19 @@ import Projects from "../layout/Projects";
 import Contact from "../layout/Contact";
 import { useRouter } from "next/router";
 import Flag from "react-flagkit";
+import Welcome from "../components/Welcome";
+import { useEffect, useState } from "react";
 
 const Home: NextPage = () => { 
   const router = useRouter();
   const { locale } = useRouter();
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 1000000)
+  })
 
   return (
     <>
@@ -25,6 +34,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Flex w="fit-content">
+      <Welcome />
         <Flex w={{lg: "25vw"}}>
         <Sidebar />
         </Flex>
@@ -34,7 +44,8 @@ const Home: NextPage = () => {
           justifyContent="center"
           alignContent="center"
           flexDir="column"
-          position="relative"        
+          position="relative"
+          display={isLoading ? "none" : "block"}    
         >
           {locale === "en-US" ? (
           <Button
