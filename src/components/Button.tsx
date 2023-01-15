@@ -7,6 +7,12 @@ function Button({content}: any) {
   return (
     <>
       <Flex
+      // as={motion.button}
+      initial={{ x: 800 }}
+      animate={{
+        x: 0,
+        transition: { duration: 1, ease: "easeIn" },
+      }}
         mb={{lg: "4"}}
         h="64px"
         justify="center"

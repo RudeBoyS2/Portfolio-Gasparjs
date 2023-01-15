@@ -56,9 +56,9 @@ function About() {
           mb={{ "2xl": "32" }}
           h={{ lg: "75vh" }}
           animate={inView ? "visible" : ""}
+          ref={ref}
           as={motion.div}
           initial="hidden"
-          ref={ref}
           variants={secondHeading}
         >
           <TabAbout />

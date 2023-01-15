@@ -1,4 +1,4 @@
-import { Flex, Text, useTheme } from "@chakra-ui/react";
+import { Box, Flex, Text, useTheme } from "@chakra-ui/react";
 import Button from "../components/Button";
 import TechsIcon from "../components/TechsIcon";
 import { Link } from "react-scroll";
@@ -9,7 +9,7 @@ import spanish from "../translations/es/es.json";
 import ChakraNextImage from "../components/ChakraNextImage";
 import {useInView} from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { firstHeading, secondHeading, thirdHeading } from "../utils/animationsVariants";
+import { firstHeading, secondHeading, thirdHeading, mainHeading1, mainHeading2, mainHeading3 } from "../utils/animationsVariants";
 
 const Main = () => {
   const { locale } = useRouter();
@@ -44,7 +44,7 @@ const Main = () => {
               animate={inView ? "visible" : ""}
               as={motion.h3}
               initial="hidden"
-              variants={firstHeading}
+              variants={mainHeading1}
               fontSize={{
                 base: "34px",
                 sm: "4xl",
@@ -67,7 +67,7 @@ const Main = () => {
             as={motion.h1}
             initial="hidden"
             ref={ref}
-            variants={secondHeading}
+            variants={mainHeading2}
               fontSize={{
                 base: "44px",
                 sm: "5xl",
@@ -86,7 +86,7 @@ const Main = () => {
             animate={inView ? "visible" : ""}
             as={motion.div}
             initial="hidden"
-            variants={thirdHeading}
+            variants={mainHeading3}
               justify="center"
               align="baseline"
               fontFamily="primary"
@@ -119,17 +119,28 @@ const Main = () => {
               </Text>
             </Flex>
           </Flex>
+          <Box h={{ base: "300px", sm: "350px", "2xl": "400px" }}
+            w={{ base: "300px", sm: "350px", "2xl": "400px" }}
+            as={motion.div}
+                initial={{ x: 600 }}
+                animate={{
+                  x: 0,
+                  transition: { duration: 1, ease: "easeIn" },
+                }}>
           <ChakraNextImage
             priority="yes"
             alignSelf="center"
             alt="Gaspar Escobar"
             src="/assets/programmer.png"
             fit="cover"
-            h={{ base: "300px", sm: "350px", "2xl": "400px" }}
-            w={{ base: "300px", sm: "350px", "2xl": "400px" }}
+            h="100%"
+            w="100%"
+            // h={{ base: "300px", sm: "350px", "2xl": "400px" }}
+            // w={{ base: "300px", sm: "350px", "2xl": "400px" }}
             position="relative"
             display={{ base: "block", sm: "none", md: "block" }}
-          />
+            />
+            </Box>
         </Flex>
 
         <Flex justifyContent="center" gap="2rem" alignSelf="center">
@@ -165,6 +176,12 @@ const Main = () => {
           flexDir="column"
           gap="2rem"
           p="1rem"
+          as={motion.div}
+                initial={{ x: 800 }}
+                animate={{
+                  x: 0,
+                  transition: { duration: 2, ease: "easeIn" },
+                }}
         >
           <Flex
             justifyContent="center"
