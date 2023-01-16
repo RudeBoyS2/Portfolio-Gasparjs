@@ -23,12 +23,13 @@ function About() {
         flexDir="column"
         width="100%"
         minH="100vh"
-        maxH={{ "2xl": "100vh" }}
+        // maxH={{ "2xl": "100vh" }}
         position="relative"
         zIndex="5"
-        gap={{ base: "2rem", lg: "6", xl: "2rem" }}
-        alignContent="center"
-        justifyContent="space-evenly"
+        // gap={{ base: "2rem", lg: "6", xl: "1rem" }}
+        align="center"
+        // justify="center"
+        justifyContent={{lg: "space-evenly", "2xl": "center"}}
         bg="secondary"
         id="about"
       >
@@ -37,11 +38,12 @@ function About() {
           as={motion.h3}
           initial="hidden"
           variants={firstHeading}
-          fontSize={{ base: "4xl", lg: "3xl", "2xl": "5xl" }}
+          fontSize={{ base: "4xl", lg: "3xl", xl: "4xl", "2xl": "5xl" }}
           fontFamily={theme.fonts.secondary}
+          fontWeight="extrabold"
           textAlign="center"
-          mt="10"
-          mb={{ "2xl": "20" }}
+          mt={{lg: "10", xl: "8", "2xl": "24"}}
+          mb={{ lg: "2rem" }}
         >
           {locale === "en-US"
             ? english.about.heading.first
@@ -50,11 +52,13 @@ function About() {
         <Flex
           alignSelf="center"
           flexDir={{ base: "column", xl: "row" }}
+          align="center"
           justifyContent="space-evenly"
           gap="5rem"
+          // mt={{lg: "1rem"}}
           width={{ "2xl": "75vw" }}
           mb={{ "2xl": "32" }}
-          h={{ lg: "75vh" }}
+          // h={{ lg: "75vh" }}
           animate={inView ? "visible" : ""}
           ref={ref}
           as={motion.div}
@@ -65,8 +69,8 @@ function About() {
           <ChakraNextImage
             alignSelf="center"
             display={{ base: "none", xl: "block" }}
-            w={{ base: "334px", "2xl": "380px" }}
-            h={{ base: "236px", "2xl": "380px" }}
+            w={{ base: "334px", "2xl": "360px" }}
+            h={{ base: "236px", "2xl": "360px" }}
             src="/assets/programmer2.png"
           />
         </Flex>

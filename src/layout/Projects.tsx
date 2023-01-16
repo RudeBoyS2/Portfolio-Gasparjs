@@ -51,9 +51,9 @@ function Projects() {
             variants={firstHeading}
             ref={ref}
       >
-        <Box p="2rem" mt={{ base: "0", sm: "0", "2xl": "28" }}>
+        <Box p="2rem" mt={{ "2xl": "28" }}>
           <Text
-            mb={{"2xl": "2rem"}}
+            mb={{xl: "0.2rem", "2xl": "2rem"}}
             fontSize={{
               base: "4xl",
               sm: "4xl",
@@ -62,6 +62,7 @@ function Projects() {
               xl: "4xl",
               "2xl": "5xl",
             }}
+            fontWeight="extrabold"
             fontFamily={theme.fonts.secondary}
             textAlign="center"
           >
@@ -78,7 +79,8 @@ function Projects() {
               xl: "xl",
               "2xl": "2xl",
             }}
-            fontFamily={theme.fonts.primary}
+            fontWeight="normal"
+            fontFamily={theme.fonts.secondary}
             color="#505050"
             textAlign="center"
             px="2rem"

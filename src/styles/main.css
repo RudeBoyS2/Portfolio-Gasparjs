@@ -30,7 +30,9 @@
     position: unset !important;
 }
 
-
+.react-multiple-carousel__arrow {
+    margin-bottom: 30px;
+}
 
 .carousel-item {
     margin: auto;

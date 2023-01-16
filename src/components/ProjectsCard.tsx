@@ -35,12 +35,13 @@ function ProjectsCard({
       <Modal isOpen={isOpen} onClose={onClose} size="4xl">
         <ModalOverlay />
         <ModalContent m="auto" py="4">
-          <ModalHeader pb="0">
+          <ModalHeader mb="3">
             <Text
               color="secondary"
               textAlign="center"
               fontSize="4xl"
-              fontFamily={theme.fonts.secondary}
+              fontWeight="bold"
+              fontFamily={theme.fonts.primary}
             >
               {title}
             </Text>
@@ -50,12 +51,12 @@ function ProjectsCard({
             <Flex flexDir="column" justify="space-around" gap="4">
               <Text
                 fontSize="xl"
-                fontWeight="bold"
+                fontWeight="semibold"
                 fontFamily={theme.fonts.primary}
               >
                 {description}
               </Text>
-              <Text fontSize="xl" fontFamily={theme.fonts.primary}>
+              <Text fontSize="xl" fontWeight="semibold" fontFamily={theme.fonts.primary}>
                 {`Stack: ${stack}`}
               </Text>
               <Flex align="center">
@@ -148,18 +149,20 @@ function ProjectsCard({
             h={{ base: "170px", xl: "200px" }}
             alt={title}
           />
-          <Flex p="0.5rem" gap="0.5rem" flexDir="column">
+          <Flex p={{base: "0.5rem", "2xl": "1rem"}} gap={{base: "0.5rem", "2xl": "1rem"}} flexDir="column">
             <Text
-              fontFamily={theme.fonts.secondary}
+              fontFamily={theme.fonts.primary}
+              fontWeight="bold"
               textAlign="center"
-              fontSize="2xl"
+              fontSize={{md: "2xl", xl: "2xl", "2xl": "3xl"}}
               color="#505050"
               mt="2"
             >
               {title}
             </Text>
             <Text
-              fontSize="xl"
+              fontSize={{md: "xl", xl: "xl", "2xl": "2xl"}}
+              fontWeight="semibold"
               textAlign="center"
               fontFamily={theme.fonts.primary}
               color="#707070"
@@ -168,9 +171,10 @@ function ProjectsCard({
             </Text>
             <Text
               textAlign="center"
+              fontWeight="normal"
               fontFamily={theme.fonts.primary}
               color="#505050"
-              fontSize="lg"
+              fontSize={{md: "lg", xl: "lg", "2xl": "xl"}}
             >
               {briefDescription}
             </Text>

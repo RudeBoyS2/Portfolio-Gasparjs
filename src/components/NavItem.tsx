@@ -32,7 +32,7 @@ const NavItem = ({ icon, name, path, setNav, nav }: Props) => {
       >
         <Flex
           w={{base: "100%", xl: "25vw"}}
-          py={{base:"1.5rem", "2xl": "3rem"}}
+          py={{base:"1.5rem", xl: "1.7rem", "2xl": "3rem"}}
           justifyContent="space-between"
           bg={nav === path ? "#202020" : ""}
           transition="all .1s ease"
@@ -43,14 +43,14 @@ const NavItem = ({ icon, name, path, setNav, nav }: Props) => {
         >
           <Icon
             as={icon}
-            fontSize={{base: "2xl", sm: "xl", "2xl": "2xl"}}
+            fontSize={{base: "2xl", sm: "xl", xl: "xl", "2xl": "2xl"}}
             fill={nav === path ? "secondary" : "tertiary"}
             alignSelf="center"
           />
           <Text
             color={nav === path ? "secondary" : "tertiary"}
-            fontSize={{base: "md", sm: "sm", xl: "lg", "2xl": "xl"}}
-            fontFamily={theme.fonts.primary}
+            fontSize={{base: "md", sm: "sm", xl: "md", "2xl": "lg"}}
+            fontFamily={theme.fonts.secondary}
           >
             {name}
           </Text>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Grid,
   Box,
@@ -34,6 +34,14 @@ const Sidebar = () => {
   const [hidden, setHidden] = useState(!isOpen);
   const [nav, setNav] = useState();
   const theme = useTheme();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 17000);
+  });
+
   const firstNavName =
     locale === "en-US" ? english.sidebar.first : spanish.sidebar.first;
   const secondNavName =
@@ -58,6 +66,7 @@ const Sidebar = () => {
           position="absolute"
           zIndex="10"
           color={isOpen ? "secondary" : "primary"}
+          as={motion.button} initial={{opacity: 0}} animate={{opacity: 1, transition: {duration: 1, delay: 8}}}
         >
           {!isOpen ? (
             <HamburgerIcon
@@ -110,7 +119,7 @@ const Sidebar = () => {
                     md: "lg",
                     lg: "16px",
                     xl: "xl",
-                    "2xl": "3xl",
+                    
                   }}
                   fontFamily={theme.fonts.primary}
                   _hover={{ color: "secondary" }}
@@ -121,7 +130,7 @@ const Sidebar = () => {
                 </Text>
                 <Text
                   color="#737272"
-                  fontSize={{ base: "sm", lg: "12px", xl: "sm", "2xl": "xl" }}
+                  fontSize={{ base: "sm", lg: "12px", xl: "sm"}}
                   fontFamily={theme.fonts.primary}
                   display={isOpen ? "block" : "none"}
                 >
@@ -228,18 +237,25 @@ const Sidebar = () => {
         position="fixed"
         zIndex="10"
         display={{ base: "none", lg: "flex" }}
+        as={motion.div}
+        initial={{ x: -500, opacity: 0 }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 1.5, ease: "easeIn", delay: 8.5 },
+        }}
       >
         <Grid h="20vh" w="100%" justifyContent="center" alignContent="center">
           <Flex
             w="100%"
             gap={2}
-            p={{ lg: "2rem", xl: "2.4rem" }}
-            justifyContent="space-between"
+            p={{ lg: "2rem", xl: "2rem" }}
+            justifyContent="center"
           >
             <ChakraNextImage
               src="https://res.cloudinary.com/dxgrn0qtx/image/upload/q_100/v1666072754/asdasd_lbeb9t.jpg"
-              w="120px"
-              h="70px"
+              w={{base: "120px", "2xl": "140px"}}
+              h={{base: "70px", "2xl": "90px"}}
               rounded="5px"
               alt="my photo"
             />
@@ -257,8 +273,9 @@ const Sidebar = () => {
                   md: "lg",
                   lg: "16px",
                   xl: "xl",
-                  "2xl": "2xl",
+                  "2xl": "xl",
                 }}
+                fontWeight="bold"
                 fontFamily={theme.fonts.primary}
                 _hover={{ color: "secondary" }}
                 transition=".3s ease"
@@ -267,7 +284,7 @@ const Sidebar = () => {
               </Text>
               <Text
                 color="#737272"
-                fontSize={{ base: "sm", lg: "12px", xl: "sm", "2xl": "lg" }}
+                fontSize={{ base: "sm", lg: "12px", xl: "md", "2xl": "lg" }}
                 fontFamily={theme.fonts.primary}
               >
                 Fullstack Developer
@@ -316,7 +333,7 @@ const Sidebar = () => {
               <Icon
                 as={AiFillLinkedin}
                 fill="#737272"
-                fontSize={{ base: "2xl", "2xl": "4xl" }}
+                fontSize={{ base: "2xl", "2xl": "3xl" }}
                 _hover={{ fill: "secondary" }}
                 transition="all .1s ease"
               />
@@ -325,7 +342,7 @@ const Sidebar = () => {
               <Icon
                 as={AiFillGithub}
                 fill="#737272"
-                fontSize={{ base: "2xl", "2xl": "4xl" }}
+                fontSize={{ base: "2xl", "2xl": "3xl" }}
                 _hover={{ fill: "secondary" }}
                 transition="all .1s ease"
               />
@@ -334,7 +351,7 @@ const Sidebar = () => {
               <Icon
                 as={AiOutlineWhatsApp}
                 fill="#737272"
-                fontSize={{ base: "2xl", "2xl": "4xl" }}
+                fontSize={{ base: "2xl", "2xl": "3xl" }}
                 _hover={{ fill: "secondary" }}
                 transition="all .1s ease"
               />
@@ -343,7 +360,7 @@ const Sidebar = () => {
               <Icon
                 as={AiFillMail}
                 fill="#737272"
-                fontSize={{ base: "2xl", "2xl": "4xl" }}
+                fontSize={{ base: "2xl", "2xl": "3xl" }}
                 _hover={{ fill: "secondary" }}
                 transition="all .1s ease"
               />

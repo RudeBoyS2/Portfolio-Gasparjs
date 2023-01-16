@@ -10,7 +10,7 @@ const Welcome = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false)
-    }, 1000)
+    }, 1500)
   })
   // const { ref, inView } = useInView({ triggerOnce: true, delay: 200, initialInView: true });
 
@@ -29,23 +29,25 @@ const Welcome = () => {
   //   },
   // };
 
+  
   return (
     <Box
-      // as={motion.div}
-      // animate={{display: "none", transition: {duration: 5.2}}}
-      // ref={ref}
-      // @ts-ignore
-      // initial={{display: "block", transition: {duration: 5.2}}}
-      // variants={asd}      
-      h="100vh"
-      w="100vw"      
-      zIndex="1"
-      // display={isLoading ? "block" : "none"}
-      display="none"
-    >
-      <Console />
-    </Box>
-  );
+      
+        // as={motion.div}
+        // animate={{display: "none", transition: {duration: 5.2}}}
+        // ref={ref}
+        // @ts-ignore
+        // initial={{display: "block", transition: {duration: 5.2}}}
+        // variants={asd}      
+        h="100vh"
+        w="100vw"      
+        zIndex="1"
+        display={isLoading ? "block" : "none"}
+        // display="none"
+      >
+        <Console />
+      </Box>
+  )
 };
 
 export default Welcome;

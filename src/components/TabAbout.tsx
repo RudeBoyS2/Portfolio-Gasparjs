@@ -23,12 +23,15 @@ function TabAbout() {
 
   return (
     <>
-      <Flex justifyContent="center">
-        <Tabs w={{base: "100vw", sm: "450px", "2xl": "550px"}} size="lg" minH={{base: "75vh", "2xl": "auto"}}>
+      <Flex justifyContent="center" h="550px">
+        <Tabs w={{base: "100vw", sm: "450px", "2xl": "600px"}} size="lg">
           <TabList fontFamily={theme.fonts.secondary} justifyContent="space-around">
             <Tab
               p="0"
+              
               fontSize={["lg", "lg", "lg", "md", "lg", "2xl"]}
+              fontFamily={theme.fonts.secondary}
+          fontWeight="bold"
               _selected={{ color: "tertiary" }}
               _active={{ bg: "none" }}
             >
@@ -39,6 +42,8 @@ function TabAbout() {
             <Tab
             p="0"
               fontSize={["lg", "lg", "lg", "md", "lg", "2xl"]}
+              fontFamily={theme.fonts.secondary}
+          fontWeight="bold"
               _selected={{ color: "tertiary" }}
               _active={{ bg: "none" }}
             >
@@ -49,6 +54,8 @@ function TabAbout() {
             <Tab
             p="0"
               fontSize={["lg", "lg", "lg", "md", "lg", "2xl"]}
+              fontFamily={theme.fonts.secondary}
+          fontWeight="bold"
               _selected={{ color: "tertiary" }}
               _active={{ bg: "none" }}
             >
@@ -63,8 +70,10 @@ function TabAbout() {
               <Flex gap="1vw" flexWrap="wrap">
                 <Text
                   color="primary"
-                  fontSize={{ base: "xl", md: "2xl", lg: "xl", "2xl": "26px" }}
+                  fontSize={{ base: "xl", md: "2xl", lg: "xl", "2xl": "2xl" }}
                   fontWeight="bold"
+                  fontFamily={theme.fonts.secondary}
+                  mt="1rem"
                 >
                   Gaspar Escobar{" | "}Fullstack Developer
                 </Text>
@@ -72,8 +81,8 @@ function TabAbout() {
               <Text
                 maxW="500px"
                 color="primary"
-                fontWeight="bold"
-                fontFamily={theme.fonts.primary}
+                fontWeight="semibold"
+                fontFamily={theme.fonts.secondary}
                 mt="1rem"
                 fontSize={{ base: "md", "2xl": "xl" }}
                 lineHeight={{base: "2rem", xl: "2rem", "2xl": "2.3rem"}}
@@ -100,8 +109,8 @@ function TabAbout() {
                 maxW="500px"
                 color="primary"
                 fontWeight="bold"
-                fontFamily={theme.fonts.primary}
-                fontSize={{ base: "md", xl: "md", "2xl": "xl" }}
+                fontFamily={theme.fonts.secondary}
+                fontSize={{ base: "md", xl: "lg", "2xl": "xl" }}
                 mt="1rem"
               >
                 {locale === "en-US"
@@ -111,8 +120,8 @@ function TabAbout() {
               <Text
                 maxW="500px"
                 color="primary"
-                fontWeight="bold"
-                fontFamily={theme.fonts.primary}
+                fontWeight="semibold"
+                fontFamily={theme.fonts.secondary}
                 fontSize={{ base: "md", xl: "md", "2xl": "xl" }}
                 mt="1rem"
               >
@@ -122,8 +131,8 @@ function TabAbout() {
               <Text
                 maxW="500px"
                 color="primary"
-                fontWeight="bold"
-                fontFamily={theme.fonts.primary}
+                fontWeight="semibold"
+                fontFamily={theme.fonts.secondary}
                 fontSize={{ base: "md", xl: "md", "2xl": "xl" }}
                 mt="1rem"
               >
@@ -132,8 +141,8 @@ function TabAbout() {
               <Text
                 maxW="500px"
                 color="primary"
-                fontWeight="bold"
-                fontFamily={theme.fonts.primary}
+                fontWeight="semibold"
+                fontFamily={theme.fonts.secondary}
                 fontSize={{ base: "md", xl: "md", "2xl": "xl" }}
                 mt="1rem"
               >
@@ -142,8 +151,8 @@ function TabAbout() {
               <Text
                 maxW="500px"
                 color="primary"
-                fontWeight="bold"
-                fontFamily={theme.fonts.primary}
+                fontWeight="semibold"
+                fontFamily={theme.fonts.secondary}
                 fontSize={{ base: "md", xl: "md", "2xl": "xl" }}
                 mt="1rem"
               >
@@ -151,19 +160,20 @@ function TabAbout() {
               </Text>
             </TabPanel>
             <TabPanel>
-              <Box fontFamily={theme.fonts.primary} w="100%">
+              <Box fontFamily={theme.fonts.secondary} w="100%">
                 <UnorderedList spacing={3}>
                   <ListItem>
                     <Text
                       fontSize={{ base: "lg", "2xl": "xl" }}
                       color="primary"
+                      fontFamily="secondary"
                       fontWeight="bold"
                       mt="1rem"
                     >
                       Job Ready
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
+                      <Text color="primary" fontFamily="secondary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
                         - Alkemy
                       </Text>
                       <a
@@ -182,13 +192,14 @@ function TabAbout() {
                     <Text
                       fontSize={{ base: "lg", "2xl": "xl" }}
                       color="primary"
+                      fontFamily="secondary"
                       fontWeight="bold"
                       mt="1rem"
                     >
                       Front-end Engineer
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
+                      <Text color="primary" fontFamily="secondary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
                         - Codecademy
                       </Text>
                       <a
@@ -206,6 +217,7 @@ function TabAbout() {
                   <ListItem>
                     <Text
                       fontSize={{ base: "lg", "2xl": "xl" }}
+                      fontFamily="secondary"
                       color="primary"
                       fontWeight="bold"
                       mt="1rem"
@@ -213,7 +225,7 @@ function TabAbout() {
                       EF SET English Certificate (C 2)
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
+                      <Text color="primary" fontFamily="secondary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
                         - EF SET
                       </Text>
                       <a
@@ -233,12 +245,13 @@ function TabAbout() {
                       fontSize={{ base: "lg", "2xl": "xl" }}
                       color="primary"
                       fontWeight="bold"
+                      fontFamily="secondary"
                       mt="1rem"
                     >
                       Sé Programar
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
+                      <Text color="primary" fontFamily="secondary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
                         - Argentina Programa
                       </Text>
                       <a
@@ -259,10 +272,11 @@ function TabAbout() {
                       color="primary"
                       fontWeight="bold"
                       mt="1rem"
+                      fontFamily="secondary"
                     >
                       Inglés Adolescente
                     </Text>
-                    <Text color="primary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
+                    <Text color="primary" fontFamily="secondary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
                       - Josefina Contte (2012 - 2017)
                     </Text>
                   </ListItem>

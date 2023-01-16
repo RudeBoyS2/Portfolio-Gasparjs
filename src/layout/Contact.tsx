@@ -11,8 +11,8 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { BsLinkedin } from "react-icons/bs";
-import { AiOutlineGithub, AiFillMail } from "react-icons/ai";
-import { IoLogoWhatsapp } from "react-icons/io";
+import { AiOutlineGithub, AiFillMail, AiFillInstagram } from "react-icons/ai";
+import { IoLogoInstagram } from "react-icons/io";
 import React, { FormEventHandler, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useRouter } from "next/router";
@@ -70,13 +70,13 @@ function Contact() {
         py="4rem"
       >
         <Flex
-          gap="5rem"
+          gap={{sm: "8rem", lg: "2rem", xl: "8rem"}}
           flexWrap={{ base: "wrap", lg: "nowrap" }}
           justify="center"
           height="fit-content"
         >
           <Flex
-            w={{ base: "350px", sm: "400px", xl: "400px", "2xl": "460px" }}
+            w={{ base: "350px", sm: "320px", xl: "400px", "2xl": "460px" }}
             flexDir="column"
             p="2rem"
             fontFamily={theme.fonts.primary}
@@ -103,6 +103,7 @@ function Contact() {
                 "2xl": "4xl",
               }}
               fontFamily={theme.fonts.secondary}
+              fontWeight="bold"
             >
               {locale === "en-US"
                 ? english.contact.heading.first
@@ -115,7 +116,7 @@ function Contact() {
               />
               <Text
                 alignSelf="center"
-                fontSize={{ base: "md", xl: "lg", "2xl": "18px" }}
+                fontSize={{ base: "md", xl: "lg", "2xl": "xl" }}
                 fontFamily={theme.fonts.primary}
               >
                 linkedin.com/in/gaspar-escobar/
@@ -149,7 +150,7 @@ function Contact() {
             </Flex>
             <Flex gap="1rem" mb="auto">
               <Icon
-                as={IoLogoWhatsapp}
+                as={AiFillInstagram}
                 fontSize={{ base: "3xl", sm: "2xl", md: "4xl", "2xl": "5xl" }}
               />
               <Text
@@ -157,17 +158,16 @@ function Contact() {
                 fontSize={{ base: "md", xl: "lg", "2xl": "xl" }}
                 fontFamily={theme.fonts.primary}
               >
-                +54 3794 397311
+                instagram.com/gasparesc/
               </Text>
             </Flex>
           </Flex>
           <Flex
             maxH="auto"
-            w={{ base: "350px", sm: "400px", xl: "400px", "2xl": "460px" }}
+            w={{ base: "350px", sm: "320px", xl: "400px", "2xl": "460px" }}
             flexDir="column"
             p="2rem"
-            fontFamily={theme.fonts.primary}
-            gap="1.5rem"
+            gap="2rem"
             rounded="20px"
             boxShadow="1px 1px 10px 1px #606060"
             bg="#fff"
@@ -175,6 +175,7 @@ function Contact() {
             as={motion.div}
             initial="hidden"
             variants={secondHeading}
+            fontFamily="primary"
           >
             <Text
               fontSize={{
@@ -187,6 +188,7 @@ function Contact() {
               }}
               fontFamily={theme.fonts.secondary}
               alignSelf="center"
+              fontWeight="bold"
             >
               {locale === "en-US"
                 ? english.contact.heading.second
@@ -194,7 +196,7 @@ function Contact() {
             </Text>
             <form onSubmit={handleSubmit} id="contact_form">
               <FormControl id="name">
-                <FormLabel  fontSize={{ base: "lg", "2xl": "2xl" }} mt="2">
+                <FormLabel  fontSize={{ base: "lg", "2xl": "xl" }} mt="2">
                   {locale === "en-US"
                     ? english.contact.input.first
                     : spanish.contact.input.first}
@@ -206,7 +208,7 @@ function Contact() {
                 />
               </FormControl>
               <FormControl id="email">
-                <FormLabel fontSize={{ base: "lg", "2xl": "2xl" }} mt="2">
+                <FormLabel fontSize={{ base: "lg", "2xl": "xl" }} mt="2">
                   {locale === "en-US"
                     ? english.contact.input.second
                     : spanish.contact.input.second}
@@ -218,7 +220,7 @@ function Contact() {
                 />
               </FormControl>
               <FormControl id="message">
-                <FormLabel fontSize={{ base: "lg", "2xl": "2xl" }} mt="2">
+                <FormLabel fontSize={{ base: "lg", "2xl": "xl" }} mt="2">
                   {locale === "en-US"
                     ? english.contact.input.third
                     : spanish.contact.input.third}
@@ -231,9 +233,10 @@ function Contact() {
                 />
               </FormControl>
               <Button
+              fontWeight="bold"
                 type="submit"
                 width="100%"
-                mt="3rem"
+                mt="4rem"
                 disabled={button}
                 bg="secondary"
                 color="primary"
@@ -242,6 +245,7 @@ function Contact() {
                   color: "secondary",
                   border: "1px solid #495dee",
                 }}
+                _active={{bg: ""}}
                 // onClick={() => setButton(true)}
                 size={{ base: "md", "2xl": "lg" }}
               >
