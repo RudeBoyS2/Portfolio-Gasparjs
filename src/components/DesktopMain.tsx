@@ -45,7 +45,7 @@ const DesktopMain = () => {
           gap={{ base: "0", sm: "4rem", "2xl": "10rem" }}
           h={{ sm: "350px" }}
           w="100%"
-        //   mt={{ "2xl": "14" }}
+          //   mt={{ "2xl": "14" }}
         >
           <Flex flexDir="column" alignSelf="center">
             <Text
@@ -64,7 +64,7 @@ const DesktopMain = () => {
               position="relative"
               alignSelf="center"
               color="#202020"
-            //   fontWeight="semibold"
+              //   fontWeight="semibold"
             >
               {locale === "en-US"
                 ? english.main.heading.first
@@ -135,7 +135,7 @@ const DesktopMain = () => {
             initial={{ x: 500 }}
             animate={{
               x: 0,
-              transition: { duration: 1, ease: "easeIn", delay: 8.5 },
+              transition: { duration: 0.5, ease: "easeIn", delay: 10.5 },
             }}
             display={{ base: "none", sm: "block" }}
           >
@@ -189,7 +189,7 @@ const DesktopMain = () => {
           initial={{ x: 900 }}
           animate={{
             x: 0,
-            transition: { duration: 0.5, ease: "easeIn", delay: 8.5 },
+            transition: { duration: 0.3, ease: "easeIn", delay: 10.5 },
           }}
           display={{ base: "none", sm: "flex" }}
         >

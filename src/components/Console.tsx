@@ -1,9 +1,16 @@
-import { Box, Flex } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import React from "react";
+import { Flex } from "@chakra-ui/react";
+import { motion, usePresence } from "framer-motion";
+import React, { useEffect, useState } from "react";
 import Terminal from "terminal-in-react";
 
 const Console = () => {
+  // const [isLoading, setIsLoading] = useState(true);
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 9000);
+  // });
   // setTimeout(() => {
   //   console.log("> npm install gasparjs-portfolio")
   // }, 1500)
@@ -29,10 +36,8 @@ const Console = () => {
   //   console.log("ready - started server on 0.0.0.0:****, url: http://gasparjs.vercel.app")
   // }, 8000)
 
-  
-    return (
-      <>
-      
+  return (
+    <>
       <Flex
         display={{ base: "none", sm: "flex" }}
         h="100vh"
@@ -42,9 +47,9 @@ const Console = () => {
         justify="center"
         key="console"
         as={motion.div}
-        initial={{ y: "100%" }}
-        animate={{ y: "0%", transition: { duration: 0.7, ease: "easeInOut" } }}
-        exit={{ y: "100%", transition: { duration: 2, ease: "easeOut" } }}
+        initial={{ y: "100%", opacity: 0 }}
+        animate={{ y: "0%", opacity: 1, transition: { duration: 0.5, ease: "easeIn" } }}
+        exit={{ opacity: 0, y: "100%", transition: { duration: 0.5, ease: "easeOut" } }}
       >
         <video
           autoPlay
@@ -52,12 +57,15 @@ const Console = () => {
           playsInline
           style={{
             objectFit: "cover",
-            height: "430px",
+            height: "382px",
+            width: "366px",
           }}
         >
           <source src="/assets/video1.mp4" type="video/mp4" />
         </video>
       </Flex>
+
+      {/* Mobile */}
       <Flex
         display={{ base: "flex", sm: "none" }}
         h="100vh"
@@ -65,11 +73,11 @@ const Console = () => {
         position="relative"
         align="center"
         justify="center"
-        key="console"
+        key="consolemobile"
         as={motion.div}
-        initial={{ y: "100%" }}
-        animate={{ y: "0%", transition: { duration: 0.7, ease: "easeInOut" } }}
-        exit={{ y: "100%", transition: { duration: 2, ease: "easeOut" } }}
+        initial={{ y: "100%", opacity: 0 }}
+        animate={{ y: "0%", opacity: 1, transition: { duration: 0.5, ease: "easeIn" } }}
+        exit={{ opacity: 0, y: "100%", transition: { duration: 0.5, ease: "easeOut" } }}
       >
         <video
           autoPlay
@@ -77,16 +85,16 @@ const Console = () => {
           playsInline
           style={{
             objectFit: "cover",
-            height: "430px",
-            // width: "500px"
+            height: "384px",
+            width: "240px"
           }}
         >
           <source src="/assets/video2.mp4" type="video/mp4" />
         </video>
       </Flex>
       </>
-    )
-      
+  );
+
   //  return (
   //    <div
   //       style={{
@@ -134,6 +142,6 @@ const Console = () => {
   //       />
   //     </div>
   // )
-}
+};
 
 export default Console;

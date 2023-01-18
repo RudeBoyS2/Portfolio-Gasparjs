@@ -42,7 +42,7 @@ function About() {
           fontFamily={theme.fonts.secondary}
           fontWeight="extrabold"
           textAlign="center"
-          mt={{lg: "10", xl: "8", "2xl": "24"}}
+          mt={{base: "10", xl: "8", "2xl": "24"}}
           mb={{ lg: "2rem" }}
         >
           {locale === "en-US"
@@ -55,10 +55,9 @@ function About() {
           align="center"
           justifyContent="space-evenly"
           gap="5rem"
-          // mt={{lg: "1rem"}}
+          mt={{base: "3rem", sm: "0"}}
           width={{ "2xl": "75vw" }}
           mb={{ "2xl": "32" }}
-          // h={{ lg: "75vh" }}
           animate={inView ? "visible" : ""}
           ref={ref}
           as={motion.div}

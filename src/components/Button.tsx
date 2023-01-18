@@ -11,11 +11,11 @@ function Button({ content }: any) {
         display={{ base: "none", sm: "flex" }}
         key="buttons"
         as={motion.div}
-        initial={{ x: 800, opacity: 0 }}
+        initial={{ x: 800, display: "none" }}
         animate={{
-          opacity: 1,
           x: 0,
-          transition: { duration: 0.5, ease: "easeIn", delay: 8.5 },
+          transition: { duration: 0.3, ease: "easeIn", delay: 10.5 },
+          display: "flex"
         }}
         mb={{ lg: "4" }}
         h="64px"
@@ -51,7 +51,7 @@ function Button({ content }: any) {
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { duration: 0.5, ease: "easeIn", delay: 8 },
+          transition: { duration: 0.5, ease: "easeIn", delay: 11.5 },
         }}
         mb={{ lg: "4" }}
         h="64px"

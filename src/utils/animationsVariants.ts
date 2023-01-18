@@ -9,7 +9,7 @@ export const mainHeading1 = {
     transition: {
       duration: 0.6,
       ease: "easeIn",
-      delay: 2.2,
+      delay: 1.7,
     },
   },
 };
@@ -25,7 +25,7 @@ export const mainHeading2 = {
     transition: {
       duration: 0.6,
       ease: "easeIn",
-      delay: 2.7,
+      delay: 2.3,
     },
   },
 };
@@ -41,7 +41,7 @@ export const mainHeading3 = {
     transition: {
       duration: 0.6,
       ease: "easeIn",
-      delay: 3.1,
+      delay: 2.8
     },
   },
 };
@@ -57,7 +57,7 @@ export const mobileHeading1 = {
     transition: {
       duration: 0.6,
       ease: "easeIn",
-      delay: 0.5,
+      delay: 0.3,
     },
   },
 };
@@ -72,7 +72,7 @@ export const mobileHeading2 = {
     transition: {
       duration: 0.6,
       ease: "easeIn",
-      delay: 1,
+      delay: 0.7,
     },
   },
 };
@@ -87,7 +87,7 @@ export const mobileHeading3 = {
     transition: {
       duration: 0.6,
       ease: "easeIn",
-      delay: 1.3,
+      delay: 1,
     },
   },
 };

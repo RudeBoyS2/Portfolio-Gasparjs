@@ -13,6 +13,7 @@ function TechsIcon({ src, alt, width }: Props) {
       <ChakraNextImage
         src={src}
         minW={{ base: "30px", "2xl": "35px" }}
+        priority="yes"
         w={width}
         // maxW={width}
         height={{ base: "30px", "2xl": "35px" }}

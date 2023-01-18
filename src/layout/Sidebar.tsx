@@ -62,11 +62,11 @@ const Sidebar = () => {
           _hover={{ bg: "none" }}
           _active={{ border: "none" }}
           aria-label="open menu"
-          display={{ base: "inline", lg: "none" }}
+          display={{ base: "block", lg: "none" }}
           position="absolute"
           zIndex="10"
           color={isOpen ? "secondary" : "primary"}
-          as={motion.button} initial={{opacity: 0}} animate={{opacity: 1, transition: {duration: 1, delay: 8}}}
+          as={motion.button} initial={{opacity: 0}} animate={{opacity: 1, transition: {duration: 1, delay: 10}}}
         >
           {!isOpen ? (
             <HamburgerIcon
@@ -238,11 +238,11 @@ const Sidebar = () => {
         zIndex="10"
         display={{ base: "none", lg: "flex" }}
         as={motion.div}
-        initial={{ x: -500, opacity: 0 }}
+        initial={{ x: -500, display: "none" }}
         animate={{
-          opacity: 1,
           x: 0,
-          transition: { duration: 1.5, ease: "easeIn", delay: 8.5 },
+          transition: { duration: 1, ease: "easeIn", delay: 10.5 },
+          display: "flex"
         }}
       >
         <Grid h="20vh" w="100%" justifyContent="center" alignContent="center">

@@ -25,7 +25,7 @@ import { firstHeading, secondHeading } from "../utils/animationsVariants";
 function Contact() {
   const { locale } = useRouter();
   const [button, setButton] = useState(false);
-  const {ref, inView} = useInView({triggerOnce: true, delay: 200});  
+  const {ref, inView} = useInView({triggerOnce: true, delay: 100});  
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -70,7 +70,7 @@ function Contact() {
         py="4rem"
       >
         <Flex
-          gap={{sm: "8rem", lg: "2rem", xl: "8rem"}}
+          gap={{base: "3rem", sm: "8rem", lg: "2rem", xl: "8rem"}}
           flexWrap={{ base: "wrap", lg: "nowrap" }}
           justify="center"
           height="fit-content"

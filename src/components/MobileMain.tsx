@@ -135,7 +135,7 @@ const MobileMain = () => {
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
-              transition: { duration: 1, ease: "easeIn", delay: 8 },
+              transition: { duration: 0.5, ease: "easeIn", delay: 11 },
             }}
             display={{ base: "block", sm: "none" }}
           >
@@ -152,6 +152,32 @@ const MobileMain = () => {
             />
           </Box>
         </Flex>
+        <Flex justifyContent="center" gap="2rem" mt="3" alignSelf="center">
+          <a
+            href="https://www.dropbox.com/s/v3wcee6qgxpmtwj/Gaspar%20Escobar%20-%20Frontend%20ReactJS%20%26%20NextJS%20Developer%20-%20CV.pdf?dl=1"
+            download
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button
+              w="175px"
+              content={
+                locale === "en-US"
+                  ? english.main.button.first
+                  : spanish.main.button.first
+              }
+            />
+          </a>
+          <Link to="contact" spy={true}>
+            <Button
+              content={
+                locale === "en-US"
+                  ? english.main.button.second
+                  : spanish.main.button.second
+              }
+            />
+          </Link>
+        </Flex>
         <Flex
           w="100%"
           mt="10"
@@ -163,7 +189,7 @@ const MobileMain = () => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { duration: 0.5, ease: "easeIn", delay: 8 },
+            transition: { duration: 0.5, ease: "easeIn", delay: 12 },
           }}
           display={{ base: "flex", sm: "none" }}
         >

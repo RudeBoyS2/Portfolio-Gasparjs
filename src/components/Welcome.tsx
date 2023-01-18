@@ -1,53 +1,34 @@
 import { Box } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { useEffect, useState } from "react";
+import { AnimatePresence, usePresence } from "framer-motion";
 import Console from "./Console";
 
 const Welcome = () => {
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
+  // const [isPresent, safeToRemove] = usePresence();
 
   useEffect(() => {
     setTimeout(() => {
-      setIsLoading(false)
-    }, 1500)
-  })
-  // const { ref, inView } = useInView({ triggerOnce: true, delay: 200, initialInView: true });
+      setIsLoading(false);
+    }, 8200);
+  });
+  // setTimeout(() => safeToRemove, 8000)
 
-  // const asd = {
-  //   hidden: {
-  //     display: "none",
-      
-  //   },
-  //   visible: {
-  //     display: "block",
-  //     transition: {
-  //       duration: 3,
-  //       delay: 3,
-  //       ease: "easeOut",
-  //     },
-  //   },
-  // };
-
-  
   return (
-    <Box
-      
-        // as={motion.div}
-        // animate={{display: "none", transition: {duration: 5.2}}}
-        // ref={ref}
-        // @ts-ignore
-        // initial={{display: "block", transition: {duration: 5.2}}}
-        // variants={asd}      
-        h="100vh"
-        w="100vw"      
-        zIndex="1"
-        display={isLoading ? "block" : "none"}
-        // display="none"
-      >
-        <Console />
-      </Box>
-  )
+    <AnimatePresence>
+      {isLoading && (
+        <Box
+          h="100vh"
+          w="100vw"
+          zIndex="10"
+          display="block"
+          key="consolediv"
+        >
+          <Console />
+        </Box>
+      )}
+    </AnimatePresence>
+  );
 };
 
 export default Welcome;
