@@ -7,15 +7,14 @@ function Button({ content }: any) {
   return (
     <>
       <Flex
-        // as={motion.button}
         display={{ base: "none", sm: "flex" }}
         key="buttons"
         as={motion.div}
-        initial={{ x: 5000, display: "none" }}
+        initial={{ x: 2000, display: "none" }}
         animate={{
           x: 0,
           transition: { duration: 0.5, ease: "easeIn", delay: 11 },
-          display: "flex"
+          display: ""
         }}
         mb={{ lg: "4" }}
         h="64px"
@@ -51,7 +50,7 @@ function Button({ content }: any) {
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { duration: 0.5, ease: "easeIn", delay: 11.5 },
+          transition: { duration: 0.8, ease: "easeIn", delay: 12.5 },
         }}
         mb={{ lg: "4" }}
         h="64px"

@@ -72,7 +72,7 @@ export const mobileHeading2 = {
     transition: {
       duration: 0.6,
       ease: "easeIn",
-      delay: 0.7,
+      delay: 1,
     },
   },
 };
@@ -87,7 +87,7 @@ export const mobileHeading3 = {
     transition: {
       duration: 0.6,
       ease: "easeIn",
-      delay: 1,
+      delay: 1.4,
     },
   },
 };

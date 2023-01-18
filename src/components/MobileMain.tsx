@@ -135,7 +135,7 @@ const MobileMain = () => {
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
-              transition: { duration: 0.5, ease: "easeIn", delay: 11 },
+              transition: { duration: 0.5, ease: "easeIn", delay: 12 },
             }}
             display={{ base: "block", sm: "none" }}
           >
@@ -189,7 +189,7 @@ const MobileMain = () => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { duration: 0.5, ease: "easeIn", delay: 12 },
+            transition: { duration: 0.5, ease: "easeIn", delay: 13 },
           }}
           display={{ base: "flex", sm: "none" }}
         >

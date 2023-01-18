@@ -186,10 +186,10 @@ const DesktopMain = () => {
           gap="2rem"
           p="1rem"
           as={motion.div}
-          initial={{ x: 5000 }}
+          initial={{ x: 2000 }}
           animate={{
             x: 0,
-            transition: { duration: 0.5, ease: "easeIn", delay: 11 },
+            transition: { duration: 1, ease: "easeIn", delay: 11.5 },
           }}
           display={{ base: "none", sm: "flex" }}
         >
