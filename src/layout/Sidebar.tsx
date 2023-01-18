@@ -238,10 +238,9 @@ const Sidebar = () => {
         zIndex="10"
         display={{ base: "none", lg: "flex" }}
         as={motion.div}
-        initial={{ x: -5000, display: "none" }}
+        initial={{ x: -5000 }}
         animate={{
           x: 0,
-          display: "",
           transition: { duration: 2, ease: "easeIn", delay: 10 },
         }}
       >
