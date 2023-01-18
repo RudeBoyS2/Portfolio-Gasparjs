@@ -10,7 +10,7 @@ const Welcome = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 8200);
+    }, 8000);
   });
   // setTimeout(() => safeToRemove, 8000)
 
@@ -23,6 +23,7 @@ const Welcome = () => {
           zIndex="10"
           display="block"
           key="consolediv"
+          overflow="hidden"
         >
           <Console />
         </Box>

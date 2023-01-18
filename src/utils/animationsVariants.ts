@@ -9,7 +9,7 @@ export const mainHeading1 = {
     transition: {
       duration: 0.6,
       ease: "easeIn",
-      delay: 1.7,
+      delay: 2.5,
     },
   },
 };
@@ -25,7 +25,7 @@ export const mainHeading2 = {
     transition: {
       duration: 0.6,
       ease: "easeIn",
-      delay: 2.3,
+      delay: 3,
     },
   },
 };
@@ -41,7 +41,7 @@ export const mainHeading3 = {
     transition: {
       duration: 0.6,
       ease: "easeIn",
-      delay: 2.8
+      delay: 3.5
     },
   },
 };

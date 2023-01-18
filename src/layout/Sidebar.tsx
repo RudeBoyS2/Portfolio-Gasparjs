@@ -238,11 +238,10 @@ const Sidebar = () => {
         zIndex="10"
         display={{ base: "none", lg: "flex" }}
         as={motion.div}
-        initial={{ x: -500, display: "none" }}
+        initial={{ x: -5000 }}
         animate={{
           x: 0,
-          transition: { duration: 1, ease: "easeIn", delay: 10.5 },
-          display: "flex"
+          transition: { duration: 2, ease: "easeIn", delay: 10 },
         }}
       >
         <Grid h="20vh" w="100%" justifyContent="center" alignContent="center">

@@ -13,7 +13,6 @@ import Flag from "react-flagkit";
 import Welcome from "../components/Welcome";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import Console from "../components/Console";
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -23,14 +22,8 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      setIsWelcomeLoading(false);
-    }, 8200);
-  });
-
-  useEffect(() => {
-    setTimeout(() => {
       setIsLoading(false);
-    }, 9000);
+    }, 10000);
   });
   
   // useEffect(() => {
@@ -49,26 +42,12 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <AnimatePresence>
         <Flex w="fit-content">
-        {isWelcomeLoading && (
-        <Box
-          h="100vh"
-          w="100vw"
-          zIndex="10"
-          display="block"
-        >
-          <Console />
-        </Box>
-      )}
-          {/* <Welcome /> */}
+          <Welcome />
           <Flex w={{ lg: "25vw" }}>
             <Sidebar />
           </Flex>
           <Flex
-            //  key="container"
-            //  as={motion.div}
-            //  initial={{ opacity: 0 }}
             w={{ base: "100vw", lg: "75vw" }}
             h="auto"
             justifyContent="center"
@@ -83,7 +62,7 @@ const Home: NextPage = () => {
                 initial={{ x: 100 }}
                 animate={{
                   x: 0,
-                  transition: { duration: 1, ease: "easeIn", delay: 10 },
+                  transition: { duration: 1, ease: "easeIn", delay: 10.5 },
                 }}
                 display="flex"
                 gap="1"
@@ -110,7 +89,7 @@ const Home: NextPage = () => {
                 initial={{ x: 100 }}
                 animate={{
                   x: 0,
-                  transition: { duration: 1, ease: "easeIn", delay: 10 },
+                  transition: { duration: 1, ease: "easeIn", delay: 10.5 },
                 }}
                 display="flex"
                 gap="1"
@@ -138,9 +117,9 @@ const Home: NextPage = () => {
             <Contact />
           </Flex>
 
-      <ParticlesBackground particles={particles2} />
         </Flex>
-        </AnimatePresence>
+      {/* <ParticlesBackground particles={particles2} /> */}
+
     </>
   );
 };

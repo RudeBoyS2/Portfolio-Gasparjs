@@ -132,10 +132,10 @@ const DesktopMain = () => {
             w={{ base: "300px", sm: "350px", "2xl": "400px" }}
             alignSelf="center"
             as={motion.div}
-            initial={{ x: 500 }}
+            initial={{ x: 1000 }}
             animate={{
               x: 0,
-              transition: { duration: 0.5, ease: "easeIn", delay: 10.5 },
+              transition: { duration: 1, ease: "easeIn", delay: 11 },
             }}
             display={{ base: "none", sm: "block" }}
           >
@@ -186,10 +186,10 @@ const DesktopMain = () => {
           gap="2rem"
           p="1rem"
           as={motion.div}
-          initial={{ x: 900 }}
+          initial={{ x: 5000 }}
           animate={{
             x: 0,
-            transition: { duration: 0.3, ease: "easeIn", delay: 10.5 },
+            transition: { duration: 0.5, ease: "easeIn", delay: 11 },
           }}
           display={{ base: "none", sm: "flex" }}
         >
