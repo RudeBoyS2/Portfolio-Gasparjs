@@ -34,13 +34,6 @@ const Sidebar = () => {
   const [hidden, setHidden] = useState(!isOpen);
   const [nav, setNav] = useState();
   const theme = useTheme();
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 17000);
-  });
 
   const firstNavName =
     locale === "en-US" ? english.sidebar.first : spanish.sidebar.first;
@@ -66,7 +59,7 @@ const Sidebar = () => {
           position="absolute"
           zIndex="10"
           color={isOpen ? "secondary" : "primary"}
-          as={motion.button} initial={{opacity: 0}} animate={{opacity: 1, transition: {duration: 1, delay: 10}}}
+          as={motion.button} initial={{opacity: 0}} animate={{opacity: 1, transition: {duration: 1, delay: 2}}}
         >
           {!isOpen ? (
             <HamburgerIcon
@@ -238,10 +231,11 @@ const Sidebar = () => {
         zIndex="10"
         display={{ base: "none", lg: "flex" }}
         as={motion.div}
-        initial={{ x: -5000 }}
+        initial={{ x: 5000, opacity: 0 }}
         animate={{
           x: 0,
-          transition: { duration: 2, ease: "easeIn", delay: 10 },
+          opacity: 1,
+          transition: { duration: 1, ease: "easeIn", delay: 0.1 },
         }}
       >
         <Grid h="20vh" w="100%" justifyContent="center" alignContent="center">

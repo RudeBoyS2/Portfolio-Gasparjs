@@ -135,7 +135,7 @@ const DesktopMain = () => {
             initial={{ x: 1000 }}
             animate={{
               x: 0,
-              transition: { duration: 1, ease: "easeIn", delay: 11 },
+              transition: { duration: 0.5, ease: "easeIn", delay: 1.7 },
             }}
             display={{ base: "none", sm: "block" }}
           >
@@ -189,7 +189,7 @@ const DesktopMain = () => {
           initial={{ x: 2000 }}
           animate={{
             x: 0,
-            transition: { duration: 0.7, ease: "easeIn", delay: 11 },
+            transition: { duration: 0.7, ease: "easeIn", delay: 1.5 },
           }}
           display={{ base: "none", sm: "flex" }}
         >

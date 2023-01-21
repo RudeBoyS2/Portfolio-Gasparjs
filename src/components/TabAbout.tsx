@@ -23,7 +23,7 @@ function TabAbout() {
 
   return (
     <>
-      <Flex justifyContent="center" h="550px">
+      <Flex justifyContent="center" h={{base: "630px", sm: "550px"}}>
         <Tabs w={{base: "100vw", sm: "450px", "2xl": "600px"}} size="lg">
           <TabList fontFamily={theme.fonts.secondary} justifyContent="space-around">
             <Tab

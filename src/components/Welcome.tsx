@@ -5,14 +5,12 @@ import Console from "./Console";
 
 const Welcome = () => {
   const [isLoading, setIsLoading] = useState(true);
-  // const [isPresent, safeToRemove] = usePresence();
 
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 8000);
   });
-  // setTimeout(() => safeToRemove, 8000)
 
   return (
     <AnimatePresence>
@@ -23,7 +21,6 @@ const Welcome = () => {
           zIndex="10"
           display="block"
           key="consolediv"
-          overflow="hidden"
         >
           <Console />
         </Box>

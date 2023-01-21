@@ -1,15 +1,14 @@
 export const mainHeading1 = {
   hidden: {
     opacity: 0,
-    // y: 100,
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.7,
       ease: "easeIn",
-      delay: 2.5,
+      delay: 2.2,
     },
   },
 };
@@ -17,15 +16,14 @@ export const mainHeading1 = {
 export const mainHeading2 = {
   hidden: {
     opacity: 0,
-    // y: 100,
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.7,
       ease: "easeIn",
-      delay: 3,
+      delay: 2.7,
     },
   },
 };
@@ -33,15 +31,14 @@ export const mainHeading2 = {
 export const mainHeading3 = {
   hidden: {
     opacity: 0,
-    // y: 100,
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.7,
       ease: "easeIn",
-      delay: 3.5
+      delay: 3.2
     },
   },
 };
@@ -49,7 +46,6 @@ export const mainHeading3 = {
 export const mobileHeading1 = {
   hidden: {
     opacity: 0,
-    // y: 100,
   },
   visible: {
     opacity: 1,
@@ -61,10 +57,10 @@ export const mobileHeading1 = {
     },
   },
 };
+
 export const mobileHeading2 = {
   hidden: {
     opacity: 0,
-    // y: 100,
   },
   visible: {
     opacity: 1,
