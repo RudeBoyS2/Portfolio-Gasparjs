@@ -129,7 +129,6 @@ const Home: NextPage = () => {
           </>
         )}
       </Flex>
-      {/* <ParticlesBackground particles={particles2} /> */}
     </>
   );
 };
