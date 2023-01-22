@@ -26,7 +26,7 @@ const Home: NextPage = () => {
       setTimeout(() => {
         setAlreadyVisited(true)
         localStorage.setItem("alreadyVisited", "true");
-      }, 9000);
+      }, 8500);
     }
   }, []);
 

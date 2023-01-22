@@ -9,7 +9,7 @@ const Welcome = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 8000);
+    }, 8200);
   });
 
   return (

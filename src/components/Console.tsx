@@ -24,9 +24,9 @@ const Console = () => {
           muted
           playsInline
           style={{
-            objectFit: "cover",
-            height: "382px",
-            width: "366px",
+            objectFit: "contain",
+            // height: "600px",
+            width: "450px",
           }}
         >
           <source src="/assets/video1.mp4" type="video/mp4" />
@@ -52,9 +52,9 @@ const Console = () => {
           muted
           playsInline
           style={{
-            objectFit: "cover",
-            height: "384px",
-            width: "240px"
+            objectFit: "fill",
+            height: "500px",
+            width: "350px"
           }}
         >
           <source src="/assets/video2.mp4" type="video/mp4" />

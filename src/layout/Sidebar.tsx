@@ -251,6 +251,7 @@ const Sidebar = () => {
               h={{base: "70px", "2xl": "90px"}}
               rounded="5px"
               alt="my photo"
+              priority="yes"
             />
 
             <Flex
