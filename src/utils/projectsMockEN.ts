@@ -19,7 +19,7 @@ export type Project = {
       type: "E-Commerce",
       briefDescription: "E-commerce made as a freelancer for a client from Argentina, made with Typescript, NextJS and ChakraUI.",
       description: "E-commerce made as a freelancer for a client from Argentina, This project consists of a Nextjs e-commerce application that uses Typescript, Google Spreadsheet API integration for CMS, and ChakraUI for styling.",
-      src: "https://res.cloudinary.com/dxgrn0qtx/image/upload/v1666223857/grekis1_djwqhl.png",
+      src: "/assets/greka.png",
       stack: "Typescript, NextJS, ChakraUI, Google Spreadsheet API",
       github: "https://github.com/axelromero99/greka",
       web: "https://www.greka-showroom.com/"
@@ -39,7 +39,7 @@ export type Project = {
       type: "Web App",
       briefDescription: "Test project for BeMaster. This project consists in a Disney+ like application.",
       description: "Test project for BeMaster. This project consists in a Disney+ like application.",
-      src: "https://res.cloudinary.com/dxgrn0qtx/image/upload/v1666223857/f1da06ac33dbe2b3001ce72170cf4636_qlzxb6.png",
+      src: "/assets/bemaster.png",
       stack: "React, ChakraUI",
       github: "https://github.com/RudeBoyS2/BeMasterFrontendTest",
       web: "https://bemastertest.netlify.app/"
@@ -49,7 +49,7 @@ export type Project = {
       type: "Landing page",
       briefDescription: "Landing page made with NextJS, Typescript and ChakraUI.",
       description: "Landing page made with NextJS, Typescript and ChakraUI. This page was made to show my information, projects and skills.",
-      src: "https://res.cloudinary.com/dxgrn0qtx/image/upload/v1666223856/ad1c067b3f6a2b1db5a661b24d5057bb_isqs8f.png",
+      src: "/assets/portfolio.png",
       stack: "NextJS, Typescript, ChakraUI",
       github: "https://github.com/RudeBoyS2/Portfolio-Gasparjs",
       web: "https://gasparjs.vercel.app/"
