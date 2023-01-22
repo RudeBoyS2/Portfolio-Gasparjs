@@ -24,7 +24,7 @@ function TabAbout() {
   return (
     <>
       <Flex justifyContent="center" h={{ "360px": "700px", base: "550px", sm: "550px" }}>
-        <Tabs w={{ base: "100vw", sm: "450px", "2xl": "600px" }} size="lg">
+        <Tabs w={{ base: "100vw", sm: "450px", "2xl": "600px" }} minH="540px" size="lg">
           <TabList
             fontFamily={theme.fonts.secondary}
             justifyContent="space-around"
@@ -79,6 +79,7 @@ function TabAbout() {
                 >
                   Gaspar Escobar{" | "}Fullstack Developer
                 </Text>
+              </Flex>
                 <Text
                   maxW="500px"
                   color="primary"
@@ -100,7 +101,6 @@ function TabAbout() {
                     ? english.about.about.third
                     : spanish.about.about.third}
                 </Text>
-              </Flex>
             </TabPanel>
             <TabPanel>
               <Text

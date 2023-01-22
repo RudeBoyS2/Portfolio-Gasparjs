@@ -23,12 +23,9 @@ function About() {
         flexDir="column"
         width="100%"
         minH="100vh"
-        // maxH={{ "2xl": "100vh" }}
         position="relative"
         zIndex="5"
-        // gap={{ base: "2rem", lg: "6", xl: "1rem" }}
         align="center"
-        // justify="center"
         justifyContent={{lg: "space-evenly", "2xl": "center"}}
         bg="secondary"
         id="about"

@@ -13,7 +13,7 @@ function Button({ content }: any) {
         initial={{ x: 2000, display: "none" }}
         animate={{
           x: 0,
-          transition: { duration: 0.5, ease: "easeIn", delay: 1.5 },
+          transition: { duration: 0.5, ease: "easeIn", delay: 1.1 },
           display: ""
         }}
         mb={{ lg: "4" }}

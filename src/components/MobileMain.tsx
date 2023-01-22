@@ -195,7 +195,7 @@ const MobileMain = () => {
         >
           <Flex
             justifyContent="center"
-            gap={{ base: "1rem", md: "3rem" }}
+            gap={{base: "0.6rem", md: "3rem" }}
             flexWrap="wrap"
           >
             <TechsIcon src="/assets/html.png" alt="html logo" width="30px" />
