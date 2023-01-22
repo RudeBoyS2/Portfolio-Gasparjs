@@ -16,10 +16,9 @@
       "fourth": "Certifications"
     },
     "about": {
-      "first": "I am a 22 years old developer from Corrientes Argentina.",
-      "second": "I discovered programming more than a year ago, and since then I have been training my skills as a web developer, learning every day.",
-      "third": "I have experience developing E-Commerces, Landing pages and Web Apps. I consider myself better on the Front-end but I've been getting into Back-end technologies for a few months now.",
-      "fourth": "Since I was a child I have been a fan of technology, games and science, I am always willing to talk about these topics."
+      "first": "I am a 22 years old web developer from Corrientes, Argentina. I discovered programming 2 years ago, and since then I have been training my skills with the MERN Stack, while also learning technologies such as NextJS, Typescript, SQL Databases, and more.",
+      "second": "I have 1 year of experience as a freelancer, working on E-Commerces, Landing Pages and Learning Management Systems.",
+      "third": "I am confident that my skills and experience makes me a valuable asset to any team, and I am excited to continue to develop my skills and experience in the IT industry."
     },
     "skills": {
       "first": "Some of the technologies i used are:"

@@ -23,15 +23,17 @@ function TabAbout() {
 
   return (
     <>
-      <Flex justifyContent="center" h={{base: "630px", sm: "550px"}}>
-        <Tabs w={{base: "100vw", sm: "450px", "2xl": "600px"}} size="lg">
-          <TabList fontFamily={theme.fonts.secondary} justifyContent="space-around">
+      <Flex justifyContent="center" h={{ "360px": "700px", base: "550px", sm: "550px" }}>
+        <Tabs w={{ base: "100vw", sm: "450px", "2xl": "600px" }} size="lg">
+          <TabList
+            fontFamily={theme.fonts.secondary}
+            justifyContent="space-around"
+          >
             <Tab
               p="0"
-              
               fontSize={["lg", "lg", "lg", "md", "lg", "2xl"]}
               fontFamily={theme.fonts.secondary}
-          fontWeight="bold"
+              fontWeight="bold"
               _selected={{ color: "tertiary" }}
               _active={{ bg: "none" }}
             >
@@ -40,10 +42,10 @@ function TabAbout() {
                 : spanish.about.heading.second}
             </Tab>
             <Tab
-            p="0"
+              p="0"
               fontSize={["lg", "lg", "lg", "md", "lg", "2xl"]}
               fontFamily={theme.fonts.secondary}
-          fontWeight="bold"
+              fontWeight="bold"
               _selected={{ color: "tertiary" }}
               _active={{ bg: "none" }}
             >
@@ -52,10 +54,10 @@ function TabAbout() {
                 : spanish.about.heading.third}
             </Tab>
             <Tab
-            p="0"
+              p="0"
               fontSize={["lg", "lg", "lg", "md", "lg", "2xl"]}
               fontFamily={theme.fonts.secondary}
-          fontWeight="bold"
+              fontWeight="bold"
               _selected={{ color: "tertiary" }}
               _active={{ bg: "none" }}
             >
@@ -67,7 +69,7 @@ function TabAbout() {
 
           <TabPanels>
             <TabPanel>
-              <Flex gap="1vw" flexWrap="wrap">
+              <Flex flexWrap="wrap">
                 <Text
                   color="primary"
                   fontSize={{ base: "xl", md: "2xl", lg: "xl", "2xl": "2xl" }}
@@ -77,32 +79,28 @@ function TabAbout() {
                 >
                   Gaspar Escobar{" | "}Fullstack Developer
                 </Text>
+                <Text
+                  maxW="500px"
+                  color="primary"
+                  fontWeight="semibold"
+                  fontFamily={theme.fonts.secondary}
+                  mt="1rem"
+                  fontSize={{ base: "md", "2xl": "xl" }}
+                  lineHeight={{ base: "2rem", xl: "2rem", "2xl": "2.3rem" }}
+                >
+                  {locale === "en-US"
+                    ? english.about.about.first
+                    : spanish.about.about.first}
+                  <br />
+                  {locale === "en-US"
+                    ? english.about.about.second
+                    : spanish.about.about.second}
+                  <br />
+                  {locale === "en-US"
+                    ? english.about.about.third
+                    : spanish.about.about.third}
+                </Text>
               </Flex>
-              <Text
-                maxW="500px"
-                color="primary"
-                fontWeight="semibold"
-                fontFamily={theme.fonts.secondary}
-                mt="1rem"
-                fontSize={{ base: "md", "2xl": "xl" }}
-                lineHeight={{base: "2rem", xl: "2rem", "2xl": "2.3rem"}}
-              >
-                {locale === "en-US"
-                ? english.about.about.first
-                : spanish.about.about.first}
-                <br />
-                {locale === "en-US"
-                ? english.about.about.second
-                : spanish.about.about.second}
-                <br />
-                {locale === "en-US"
-                ? english.about.about.third
-                : spanish.about.about.third}
-                <br />
-                {locale === "en-US"
-                ? english.about.about.fourth
-                : spanish.about.about.fourth}
-              </Text>
             </TabPanel>
             <TabPanel>
               <Text
@@ -114,8 +112,8 @@ function TabAbout() {
                 mt="1rem"
               >
                 {locale === "en-US"
-                ? english.about.skills.first
-                : spanish.about.skills.first}
+                  ? english.about.skills.first
+                  : spanish.about.skills.first}
               </Text>
               <Text
                 maxW="500px"
@@ -173,7 +171,12 @@ function TabAbout() {
                       Job Ready
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontFamily="secondary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
+                      <Text
+                        color="primary"
+                        fontFamily="secondary"
+                        fontWeight="thin"
+                        fontSize={{ "2xl": "lg" }}
+                      >
                         - Alkemy
                       </Text>
                       <a
@@ -199,7 +202,12 @@ function TabAbout() {
                       Front-end Engineer
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontFamily="secondary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
+                      <Text
+                        color="primary"
+                        fontFamily="secondary"
+                        fontWeight="thin"
+                        fontSize={{ "2xl": "lg" }}
+                      >
                         - Codecademy
                       </Text>
                       <a
@@ -225,7 +233,12 @@ function TabAbout() {
                       EF SET English Certificate (C 2)
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontFamily="secondary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
+                      <Text
+                        color="primary"
+                        fontFamily="secondary"
+                        fontWeight="thin"
+                        fontSize={{ "2xl": "lg" }}
+                      >
                         - EF SET
                       </Text>
                       <a
@@ -251,7 +264,12 @@ function TabAbout() {
                       Sé Programar
                     </Text>
                     <Flex align="center" gap="3">
-                      <Text color="primary" fontFamily="secondary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
+                      <Text
+                        color="primary"
+                        fontFamily="secondary"
+                        fontWeight="thin"
+                        fontSize={{ "2xl": "lg" }}
+                      >
                         - Argentina Programa
                       </Text>
                       <a
@@ -276,7 +294,12 @@ function TabAbout() {
                     >
                       Inglés Adolescente
                     </Text>
-                    <Text color="primary" fontFamily="secondary" fontWeight="thin" fontSize={{"2xl": "lg"}}>
+                    <Text
+                      color="primary"
+                      fontFamily="secondary"
+                      fontWeight="thin"
+                      fontSize={{ "2xl": "lg" }}
+                    >
                       - Josefina Contte (2012 - 2017)
                     </Text>
                   </ListItem>
