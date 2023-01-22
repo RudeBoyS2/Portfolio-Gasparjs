@@ -12,7 +12,6 @@ import {
 } from "@chakra-ui/react";
 import { BsLinkedin } from "react-icons/bs";
 import { AiOutlineGithub, AiFillMail, AiFillInstagram } from "react-icons/ai";
-import { IoLogoInstagram } from "react-icons/io";
 import React, { FormEventHandler, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useRouter } from "next/router";

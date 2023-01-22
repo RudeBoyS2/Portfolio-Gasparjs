@@ -15,7 +15,6 @@ function TechsIcon({ src, alt, width }: Props) {
         minW={{ base: "30px", "2xl": "35px" }}
         priority="yes"
         w={width}
-        // maxW={width}
         height={{ base: "30px", "2xl": "35px" }}
         transition="all .1s ease"
         _hover={{ transform: "scale(1.1)" }}

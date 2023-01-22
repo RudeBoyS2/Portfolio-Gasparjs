@@ -215,10 +215,6 @@ function TabAbout() {
                         target="_blank"
                         rel="noreferrer"
                       >
-                        {/* <AttachmentIcon
-                          _hover={{ color: "tertiary" }}
-                          transition="all .2s ease"
-                        /> */}
                       </a>
                     </Flex>
                   </ListItem>

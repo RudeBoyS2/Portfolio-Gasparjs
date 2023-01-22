@@ -44,7 +44,6 @@ function Button({ content }: any) {
       {/* ------------------------MOBILE----------------------- */}
       <Flex
         display={{ base: "flex", sm: "none" }}
-        // as={motion.button}
         key="buttons1"
         as={motion.div}
         initial={{ opacity: 0 }}

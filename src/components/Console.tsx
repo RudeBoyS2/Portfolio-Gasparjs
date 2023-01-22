@@ -1,7 +1,6 @@
 import { Flex } from "@chakra-ui/react";
-import { motion, usePresence } from "framer-motion";
-import React, { useEffect, useState } from "react";
-import Terminal from "terminal-in-react";
+import { motion } from "framer-motion";
+import React from "react";
 
 const Console = () => {
 

@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { AnimatePresence, usePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import Console from "./Console";
 
 const Welcome = () => {
