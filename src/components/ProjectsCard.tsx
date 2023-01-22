@@ -131,7 +131,7 @@ function ProjectsCard({
           "2xl": "400px",
         }}
         h={{ base: "460px", lg: "430px", xl: "430px", "2xl": "500px" }}
-        boxShadow="xl"
+        boxShadow={{base: "md", sm: "xl"}}
         margin="auto"
         mb={{ "2xl": "20" }}
       >

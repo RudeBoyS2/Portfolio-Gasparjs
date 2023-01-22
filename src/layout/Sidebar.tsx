@@ -166,7 +166,7 @@ const Sidebar = () => {
 
           <Grid
             h="15vh"
-            mt="auto"
+            mb={{base: "14", sm: "auto"}}
             justifyContent="center"
             alignContent="center"
             position="absolute"

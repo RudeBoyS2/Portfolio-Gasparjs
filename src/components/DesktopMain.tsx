@@ -45,7 +45,6 @@ const DesktopMain = () => {
           gap={{ base: "0", sm: "4rem", "2xl": "10rem" }}
           h={{ sm: "350px" }}
           w="100%"
-          //   mt={{ "2xl": "14" }}
         >
           <Flex flexDir="column" alignSelf="center">
             <Text
@@ -64,7 +63,6 @@ const DesktopMain = () => {
               position="relative"
               alignSelf="center"
               color="#202020"
-              //   fontWeight="semibold"
             >
               {locale === "en-US"
                 ? english.main.heading.first
@@ -154,7 +152,7 @@ const DesktopMain = () => {
         </Flex>
         <Flex justifyContent="center" gap="4rem" alignSelf="center">
           <a
-            href="https://www.dropbox.com/s/v3wcee6qgxpmtwj/Gaspar%20Escobar%20-%20Frontend%20ReactJS%20%26%20NextJS%20Developer%20-%20CV.pdf?dl=1"
+            href="https://www.dropbox.com/s/k7ffxq1eunt4bbm/Gaspar%20Escobar%20-%20Fullstack%20Web%20Developer%20-%20CV.pdf?dl=1"
             download
             target="_blank"
             rel="noreferrer"
