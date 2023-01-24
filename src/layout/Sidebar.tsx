@@ -246,7 +246,7 @@ const Sidebar = () => {
             justifyContent="center"
           >
             <ChakraNextImage
-              src="https://res.cloudinary.com/dxgrn0qtx/image/upload/q_100/v1666072754/asdasd_lbeb9t.jpg"
+              src="/assets/profile.jpg"
               w={{base: "120px", "2xl": "140px"}}
               h={{base: "70px", "2xl": "90px"}}
               rounded="5px"
