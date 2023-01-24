@@ -22,7 +22,7 @@ const theme = extendTheme({
   },
   colors: {
     primary: "#141516",
-    secondary: "#495dee",
+    secondary: "rgb(93,113,258)",
     tertiary: "#f8f8f9",
   },
   components: {
