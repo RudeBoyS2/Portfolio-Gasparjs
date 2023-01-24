@@ -180,7 +180,7 @@ function TabAbout() {
                         - Alkemy
                       </Text>
                       <a
-                        href="https://www.twitter.com"
+                        href="https://www.dropbox.com/s/pycm5hcmhcri0gf/alkemyjobready.jpg?dl=0"
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -211,7 +211,7 @@ function TabAbout() {
                         - Codecademy
                       </Text>
                       <a
-                        href="https://www.twitter.com"
+                        href=""
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -238,7 +238,7 @@ function TabAbout() {
                         - EF SET
                       </Text>
                       <a
-                        href="https://www.twitter.com"
+                        href="https://www.dropbox.com/s/axt0rmyz9ve1807/EF%20SET%20Certificate.pdf?dl=0"
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -269,7 +269,7 @@ function TabAbout() {
                         - Argentina Programa
                       </Text>
                       <a
-                        href="https://www.twitter.com"
+                        href="https://www.dropbox.com/s/j223csmv6sjyjye/se%20programar%20argentina%20programa.pdf?dl=0"
                         target="_blank"
                         rel="noreferrer"
                       >
