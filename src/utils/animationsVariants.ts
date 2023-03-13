@@ -75,7 +75,6 @@ export const mobileHeading2 = {
 export const mobileHeading3 = {
   hidden: {
     opacity: 0,
-    // y: 100,
   },
   visible: {
     opacity: 1,

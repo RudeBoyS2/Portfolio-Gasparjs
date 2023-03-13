@@ -46,6 +46,7 @@ function Contact() {
             status: "success",
             duration: 9000,
             isClosable: true,
+            position: "bottom-right",
           });
         }
       })
